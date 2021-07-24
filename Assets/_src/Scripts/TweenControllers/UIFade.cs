@@ -11,29 +11,42 @@ namespace KaitoMajima
         private CanvasGroup canvasGroup;
 
         [SerializeField]
-        private PlayOnStartTween playOnStart = PlayOnStartTween.None;
+        private PlayOnEnableTween playOnEnable = PlayOnEnableTween.None;
 
         [SerializeField]
         private bool destroyOnEndDeactivate;
 
         [SerializeField]
+        private bool resetFade;
+
+        [SerializeField]
         private TweenSettings tweenSettings = TweenSettings.Default;
 
-        private void Start()
+        private void OnEnable()
         {
-            if(playOnStart == PlayOnStartTween.Activate)
+            if(playOnEnable == PlayOnEnableTween.Activate)
                 Activate();
-            if(playOnStart == PlayOnStartTween.Deactivate)
+            if(playOnEnable == PlayOnEnableTween.Deactivate)
                 Deactivate();
         }
         public override void Activate()
         {
-            canvasGroup.DOFade(1, tweenSettings.duration).SetEase(tweenSettings.easeType);
+            if(resetFade)
+                canvasGroup.alpha = 0;
+            
+            Tween tween = canvasGroup.DOFade(1, tweenSettings.duration).SetEase(tweenSettings.easeType);
+            if(tweenSettings.ignoreTimeScale)
+                tween.SetUpdate(true);
         }
 
         public override void Deactivate()
         {
-            canvasGroup.DOFade(0, tweenSettings.duration).SetEase(tweenSettings.easeType).OnComplete(DestroyOnEnd);
+            if(resetFade)
+                canvasGroup.alpha = 1;
+            
+            Tween tween = canvasGroup.DOFade(0, tweenSettings.duration).SetEase(tweenSettings.easeType).OnComplete(DestroyOnEnd);
+            if(tweenSettings.ignoreTimeScale)
+                tween.SetUpdate(true);
         }
 
         private void DestroyOnEnd()

@@ -12,6 +12,8 @@ namespace KaitoMajima
         public float duration;
         public Ease easeType;
         public bool useLoops;
+
+        public bool ignoreTimeScale;
         public LoopType loopType;
 
         public static TweenSettings Default = new TweenSettings()

@@ -9,33 +9,41 @@ namespace KaitoMajima
     {
         [SerializeField] private Transform movingTransform;
 
-        [SerializeField] private PlayOnStartTween playOnStart = PlayOnStartTween.None;
+        [SerializeField] private PlayOnEnableTween playOnEnable = PlayOnEnableTween.None;
 
         [SerializeField] private TweenSettings tweenSettings = TweenSettings.Default;
 
         [SerializeField] private TweenVector2Settings tweenVectorSettings = TweenVector2Settings.Default;
 
-        private void Start()
+        private void OnEnable()
         {
-            
-            if(playOnStart == PlayOnStartTween.Activate)
+            if(playOnEnable == PlayOnEnableTween.Activate)
                 Activate();
-            if(playOnStart == PlayOnStartTween.Deactivate)
+            if(playOnEnable == PlayOnEnableTween.Deactivate)
                 Deactivate();
         }
         public override void Activate()
         {   
             movingTransform.localPosition = tweenVectorSettings.startValue;
+            Tween tween;
             if(!tweenSettings.useLoops)
-                movingTransform.DOLocalMove(tweenVectorSettings.endValue, tweenSettings.duration).SetEase(tweenSettings.easeType);
+                tween = movingTransform.DOLocalMove(tweenVectorSettings.endValue, tweenSettings.duration).SetEase(tweenSettings.easeType);
             else
-                movingTransform.DOLocalMove(tweenVectorSettings.endValue, tweenSettings.duration).SetEase(tweenSettings.easeType).SetLoops(-1, tweenSettings.loopType);
+                tween = movingTransform.DOLocalMove(tweenVectorSettings.endValue, tweenSettings.duration).SetEase(tweenSettings.easeType).SetLoops(-1, tweenSettings.loopType);
+            
+            if(tweenSettings.ignoreTimeScale)
+                tween.SetUpdate(true);
         }
 
         public override void Deactivate()
         {
             movingTransform.localPosition = tweenVectorSettings.endValue;
-            movingTransform.DOLocalMove(tweenVectorSettings.startValue, tweenSettings.duration).SetEase(tweenSettings.easeType);
+            Tween tween;
+
+            tween = movingTransform.DOLocalMove(tweenVectorSettings.startValue, tweenSettings.duration).SetEase(tweenSettings.easeType);
+
+            if(tweenSettings.ignoreTimeScale)
+                tween.SetUpdate(true);
         }
     }
 }

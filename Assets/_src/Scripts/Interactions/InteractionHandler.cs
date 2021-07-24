@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 namespace KaitoMajima
@@ -11,108 +12,93 @@ namespace KaitoMajima
     public class InteractionHandler : MonoBehaviour
     {
         [SerializeField] private PlayerInput playerInput;
-        [SerializeField] private Player player;
-        [SerializeField] private Transform actorTransform;
-        [SerializeField] private float detectionRadius;
-        [SerializeField] private LayerMask interactableMask;
-        [SerializeField] private bool debugActivated;
 
-        [SerializeField] [ReadOnly] private Collider2D[] targets = new Collider2D[5];
-
-        private Action onInteractableAreaCleared;
-        private Action onInteractableAreaEntered;
-        private Action onInteractableAreaExited;
-
+        [SerializeField] [ReadOnly] private List<Collider2D> targets = new List<Collider2D>();
 
         private TriggeredInteraction selectedInteractable;
-        private int targetsCount;
-        private InputAction movementAction;
+        private InputAction interactAction;
 
         private void Start()
         {
+            targets.Clear();
+
+            if(playerInput == null)
+                return;
             var playerActionMap = playerInput.actions.FindActionMap("Player");
             playerActionMap.Enable();
 
-            movementAction = playerActionMap.FindAction("Movement");
-            movementAction.performed += Interact;
-
-            onInteractableAreaCleared += AreaClear;
-            onInteractableAreaEntered += AreaEnter;
-            onInteractableAreaExited += AreaExit;
+            interactAction = playerActionMap.FindAction("Interact");
+            interactAction.performed += Interact;
 
         }
 
         private void Interact(InputAction.CallbackContext ctx)
         {
+            if(playerInput == null)
+                return;
             if (selectedInteractable == null)
                 return;
             selectedInteractable.OnInteract();
-
         }
-        private void Update()
+        private bool ReturnToPreviousSelected()
         {
-            int previousTargetsCount = targetsCount;
-            targetsCount = Physics2D.OverlapCircleNonAlloc(actorTransform.position, detectionRadius, targets, interactableMask);
-
-            if(targetsCount == 0 && previousTargetsCount > 0)
-                onInteractableAreaCleared?.Invoke();
-            else if(targetsCount < previousTargetsCount)
-                onInteractableAreaExited?.Invoke();
-            else if(targetsCount > previousTargetsCount)
-                onInteractableAreaEntered?.Invoke();      
-        }
-        
-        private void AreaEnter()
-        {
-            Debug.Log("Enter");
-
-            if (selectedInteractable != null)
-                selectedInteractable.OnAreaExit();
-
-
-            var selectedTarget = targets[0];
+            if(targets.Count == 0)
+                return false;
             
-            if(!selectedTarget.TryGetComponent(out TriggeredInteraction interactable))
-                return;
+            var target = targets[targets.Count - 1];
+            if(target != null)
+            {
+                if(!target.TryGetComponent(out TriggeredInteraction interaction))
+                    return false;
 
-            selectedInteractable = interactable;
-            Debug.Log(selectedInteractable.transform.parent.name);
-            selectedInteractable.OnAreaEnter(); 
+                selectedInteractable = interaction;
+                selectedInteractable.OnAreaEnter();
+            }
+            return true;
+
         }
-
-        private void AreaExit()
+        private void ExitRemainingAreas(Collider2D collider)
         {
-            Debug.Log("Exit");
+            foreach (var target in targets)
+            {
+                if(target == collider)
+                    return;
+                
+                if(!target.TryGetComponent(out TriggeredInteraction interaction))
+                    return;
             
+                interaction.OnAreaExit();
+            }
         }
-        private void AreaClear()
+        private void OnTriggerEnter2D(Collider2D collider)
         {
-            Debug.Log("Clear");
-
-            targets = new Collider2D[5];
-            if (selectedInteractable == null)
+            if(!collider.TryGetComponent(out TriggeredInteraction interaction))
                 return;
-            selectedInteractable.OnAreaExit();
-            selectedInteractable = null;
             
+            selectedInteractable = interaction;
+            selectedInteractable.OnAreaEnter();
+            targets.Add(collider);
+            ExitRemainingAreas(collider);
         }
 
-        private void OnDrawGizmosSelected()
+        private void OnTriggerExit2D(Collider2D collider)
         {
-            if (!debugActivated)
+            if(!collider.TryGetComponent(out TriggeredInteraction interaction))
                 return;
+            
+            interaction.OnAreaExit();
+            targets.Remove(collider);
 
-            Gizmos.color = Color.blue;
-            Gizmos.DrawWireSphere(actorTransform.position, detectionRadius);
+            if(!ReturnToPreviousSelected())
+                selectedInteractable = null;
+            
         }
 
         private void OnDestroy()
         {
-            movementAction.performed -= Interact;
-
-            onInteractableAreaCleared -= AreaClear;
-            onInteractableAreaEntered -= AreaEnter;
-            onInteractableAreaExited -= AreaExit;
+            if(playerInput == null)
+                return;
+            interactAction.performed -= Interact;
 
         }
     }

@@ -7,7 +7,7 @@ namespace KaitoMajima
 {
     public abstract class TweenController : MonoBehaviour
     {
-        public enum PlayOnStartTween
+        public enum PlayOnEnableTween
         {
             None,
             Activate,

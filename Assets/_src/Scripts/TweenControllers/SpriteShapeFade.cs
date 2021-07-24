@@ -12,7 +12,7 @@ namespace KaitoMajima
         private SpriteShapeRenderer spriteRenderer;
 
         [SerializeField]
-        private PlayOnStartTween playOnStart = PlayOnStartTween.None;
+        private PlayOnEnableTween playOnEnable = PlayOnEnableTween.None;
 
         [SerializeField]
         private bool destroyOnEndDeactivate;
@@ -20,11 +20,11 @@ namespace KaitoMajima
         [SerializeField]
         private TweenSettings tweenSettings = TweenSettings.Default;
 
-        private void Start()
+        private void OnEnable()
         {
-            if(playOnStart == PlayOnStartTween.Activate)
+            if(playOnEnable == PlayOnEnableTween.Activate)
                 Activate();
-            if(playOnStart == PlayOnStartTween.Deactivate)
+            if(playOnEnable == PlayOnEnableTween.Deactivate)
                 Deactivate();
         }
         public override void Activate()

@@ -9,6 +9,12 @@ namespace KaitoMajima
     {
         [SerializeField] private CinemachineImpulseSource impulseSource;
         
+        [SerializeField] private bool playOnAwake;
+        private void Awake()
+        {
+            if(playOnAwake)
+                TriggerImpulse();
+        }
         public void TriggerImpulse()
         {
             impulseSource.GenerateImpulse(Vector2.up);

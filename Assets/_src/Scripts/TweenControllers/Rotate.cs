@@ -11,7 +11,7 @@ namespace KaitoMajima
         private Transform rotationTransform;
 
         [SerializeField]
-        private PlayOnStartTween playOnStart = PlayOnStartTween.None;
+        private PlayOnEnableTween playOnEnable = PlayOnEnableTween.None;
 
         [SerializeField]
         private TweenSettings tweenSettings = TweenSettings.Default;
@@ -19,12 +19,11 @@ namespace KaitoMajima
         [SerializeField]
         private TweenVector3Settings tweenVectorSettings = TweenVector3Settings.Default;
 
-        private void Start()
+        private void OnEnable()
         {
-            
-            if(playOnStart == PlayOnStartTween.Activate)
+            if(playOnEnable == PlayOnEnableTween.Activate)
                 Activate();
-            if(playOnStart == PlayOnStartTween.Deactivate)
+            if(playOnEnable == PlayOnEnableTween.Deactivate)
                 Deactivate();
         }
         public override void Activate()

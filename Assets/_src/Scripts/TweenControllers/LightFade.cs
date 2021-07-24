@@ -12,18 +12,18 @@ namespace KaitoMajima
         private Light2D light2D;
 
         [SerializeField]
-        private PlayOnStartTween playOnStartTween = PlayOnStartTween.Deactivate;
+        private PlayOnEnableTween playOnEnable = PlayOnEnableTween.Deactivate;
 
         [SerializeField]
         private TweenSettings tweenSettings = TweenSettings.Default;
 
         [SerializeField]
         private bool destroyOnEndDeactivate;
-        private void Start()
+        private void OnEnable()
         {
-            if(playOnStartTween == PlayOnStartTween.Activate)
+            if(playOnEnable == PlayOnEnableTween.Activate)
                 Activate();
-            if(playOnStartTween == PlayOnStartTween.Deactivate)
+            if(playOnEnable == PlayOnEnableTween.Deactivate)
                 Deactivate();
         }
 

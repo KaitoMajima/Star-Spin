@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
 using System.Threading.Tasks;
+using System;
 
 namespace KaitoMajima
 {
@@ -18,6 +19,8 @@ namespace KaitoMajima
         private float waitSeconds;
         private double playablePreviousTime;
         private double playableDuration;
+
+        public static Action onSkippingClip;
 
         public override void OnPlayableCreate(Playable playable)
         {
@@ -88,16 +91,20 @@ namespace KaitoMajima
 
         private void SkipClip()
         {
+            
             bool atClipEnd = playableDuration == 0 && playablePreviousTime == 0;
             if (atClipEnd)
             {
+                double timelineSpeed = timeline.playableGraph.GetRootPlayable(0).GetSpeed();
+                if(timelineSpeed == 0)
+                    onSkippingClip.Invoke();
                 ResumeTimeline(timeline);
                 return;
             }
             unpauseRequest = true;
             timeline.time += playableDuration - playablePreviousTime;
             timeline.Evaluate();
-
+            onSkippingClip.Invoke();
         }
 
         public void ResumeTimeline(PlayableDirector timeline)

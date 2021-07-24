@@ -21,6 +21,8 @@ namespace KaitoMajima
         private ParticleSystem.MinMaxCurve originalRateOverDistance;
         private int limitValue = 0;
 
+        private const int PARTICLE_FULL = 0;
+        private const int PARTICLE_PARTIAL = 1;
         private void Awake()
         {
             originalRateOverTime = mainParticleSystem.emission.rateOverTime;
@@ -45,11 +47,11 @@ namespace KaitoMajima
         {
             switch (limitValue)
             {
-                case 0:
+                case PARTICLE_FULL:
                     emissionModule.rateOverTime = originalRateOverTime;
                     emissionModule.rateOverDistance = originalRateOverDistance;
                     break;
-                case 1:
+                case PARTICLE_PARTIAL:
                     emissionModule.rateOverTime = new ParticleSystem.MinMaxCurve(
                         originalRateOverTime.constantMax * limiterRate);
                     emissionModule.rateOverDistance = new ParticleSystem.MinMaxCurve(
@@ -61,7 +63,7 @@ namespace KaitoMajima
 
         private void LimitBursts()
         {
-            if (limitValue == 1 && limitBursts)
+            if (limitValue == PARTICLE_PARTIAL && limitBursts)
             {
                 ParticleSystem.Burst[] bursts = new ParticleSystem.Burst[emissionModule.burstCount];
                 emissionModule.GetBursts(bursts);

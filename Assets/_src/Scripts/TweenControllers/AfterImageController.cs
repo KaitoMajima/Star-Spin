@@ -19,7 +19,7 @@ namespace KaitoMajima
         public Transform InstantiateTransform {get => instantiateTransform; set => instantiateTransform = value; }
 
         [SerializeField]
-        private PlayOnStartTween playOnStart = PlayOnStartTween.None;
+        private PlayOnEnableTween playOnEnable = PlayOnEnableTween.None;
 
         [SerializeField]
         private bool timerIsInclusive;
@@ -28,9 +28,9 @@ namespace KaitoMajima
 
         public Action<GameObject> OnAfterImageInstantiated;
 
-        private void Start()
+        private void OnEnable()
         {
-            if(playOnStart == PlayOnStartTween.Activate)
+            if(playOnEnable == PlayOnEnableTween.Activate)
                 Activate();
         }
         public override void Activate()

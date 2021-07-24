@@ -14,7 +14,7 @@ namespace KaitoMajima
         private string property;
 
         [SerializeField]
-        private PlayOnStartTween playOnStartTween = PlayOnStartTween.Activate;
+        private PlayOnEnableTween playOnEnable = PlayOnEnableTween.Activate;
 
         [SerializeField]
         private TweenSettings tweenSettings = TweenSettings.Default;
@@ -28,9 +28,9 @@ namespace KaitoMajima
             rendererMaterial = spriteRenderer.material;
         }
 
-        private void Start()
+        private void OnEnable()
         {
-            if(playOnStartTween == PlayOnStartTween.Activate)
+            if(playOnEnable == PlayOnEnableTween.Activate)
                 Activate();
         }
         public override void Activate()

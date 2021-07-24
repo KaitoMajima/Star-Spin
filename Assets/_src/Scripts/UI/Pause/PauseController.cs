@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
@@ -10,8 +11,9 @@ namespace KaitoMajima
     public class PauseController : MonoBehaviour
     {
         [SerializeField] private PlayerInput playerInput;
+        [SerializeField] private TransformReference dynamicPlayerInputReference;
         [SerializeField] private GameObject pauseMenu;
-        [SerializeField] private NextSelectedButton nextSelection;
+        [SerializeField] private UnityEvent onPause;
         private bool pauseActivated = false;
         private InputActionMap playerMap;
         private InputActionMap pauseMap;
@@ -22,6 +24,9 @@ namespace KaitoMajima
 
         private void Start()
         {
+            if(playerInput == null)
+                playerInput = dynamicPlayerInputReference.Value.GetComponent<PlayerInput>();
+            
             pauseMap = playerInput.actions.FindActionMap("UIExtra");
             playerMap = playerInput.actions.FindActionMap("Player");
 
@@ -64,7 +69,7 @@ namespace KaitoMajima
         {
             Time.timeScale = 0;
             playerMap.Disable();
-            nextSelection.Connect();
+            onPause?.Invoke();
         }
 
         private void PauseRelease()

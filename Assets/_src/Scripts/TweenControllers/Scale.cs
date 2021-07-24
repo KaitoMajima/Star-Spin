@@ -12,7 +12,7 @@ namespace KaitoMajima
         private Transform scaledTransform;
 
         [SerializeField]
-        private PlayOnStartTween playOnStart = PlayOnStartTween.None;
+        private PlayOnEnableTween playOnEnable = PlayOnEnableTween.None;
 
         [SerializeField]
         private TweenSettings tweenSettings = TweenSettings.Default;
@@ -21,12 +21,17 @@ namespace KaitoMajima
         private TweenScaleValueSettings tweenScaleValueSettings = TweenScaleValueSettings.Default;
 
         private Vector3 originalScale;
+        
         private void Start()
         {
             originalScale = scaledTransform.localScale;
-            if(playOnStart == PlayOnStartTween.Activate)
+        }
+        private void OnEnable()
+        {
+            
+            if(playOnEnable == PlayOnEnableTween.Activate)
                 Activate();
-            if(playOnStart == PlayOnStartTween.Deactivate)
+            if(playOnEnable == PlayOnEnableTween.Deactivate)
                 Deactivate();
         }
         public override void Activate()
@@ -34,10 +39,15 @@ namespace KaitoMajima
 
             if(!tweenSettings.useLoops)
             {
+                if(tweenScaleValueSettings.resetValues)
+                    scaledTransform.localScale = originalScale;
+                    
                 if(tweenScaleValueSettings.scaleType == TweenScaleValueSettings.ScaleType.FixedVectorScale)
                     scaledTransform.DOScale(tweenScaleValueSettings.fixedScale, tweenSettings.duration).SetEase(tweenSettings.easeType);
                 else
                     scaledTransform.DOScale(tweenScaleValueSettings.rateScale, tweenSettings.duration).SetEase(tweenSettings.easeType);
+                
+                
             }
             else
             {

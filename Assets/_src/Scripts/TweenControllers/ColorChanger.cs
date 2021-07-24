@@ -12,22 +12,21 @@ namespace KaitoMajima
         [SerializeField] private string property;
 
         [SerializeField] private Gradient gradient;
-        [SerializeField] private PlayOnStartTween playOnStartTween = PlayOnStartTween.Activate;
+        [SerializeField] private PlayOnEnableTween playOnEnable = PlayOnEnableTween.Activate;
 
         [SerializeField] private TweenSettings tweenSettings = TweenSettings.Default;
 
         private Material rendererMaterial;
         private void Awake()
         {
-            
             rendererMaterial = spriteRenderer.material;
         }
 
-        private void Start()
+        private void OnEnable()
         {
-            if(playOnStartTween == PlayOnStartTween.Activate)
+            if(playOnEnable == PlayOnEnableTween.Activate)
                 Activate();
-            if(playOnStartTween == PlayOnStartTween.Deactivate)
+            if(playOnEnable == PlayOnEnableTween.Deactivate)
                 Deactivate();
         }
         public override void Activate()

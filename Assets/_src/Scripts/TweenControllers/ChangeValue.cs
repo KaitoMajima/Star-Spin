@@ -8,7 +8,7 @@ namespace KaitoMajima
 {
     public class ChangeValue : TweenController
     {
-        [SerializeField] private PlayOnStartTween playOnStart = PlayOnStartTween.None;
+        [SerializeField] private PlayOnEnableTween playOnEnable = PlayOnEnableTween.None;
         [SerializeField] private TweenSettings tweenSettings = TweenSettings.Default;
         [SerializeField] private TweenValueSettings tweenValueSettings;
         public float Value {get; private set;}
@@ -17,11 +17,11 @@ namespace KaitoMajima
 
         private Tween currentTween;
         private float originalValue;
-        private void Start()
+        private void OnEnable()
         {
-            if(playOnStart == PlayOnStartTween.Activate)
+            if(playOnEnable == PlayOnEnableTween.Activate)
                 Activate();
-            if(playOnStart == PlayOnStartTween.Deactivate)
+            if(playOnEnable == PlayOnEnableTween.Deactivate)
                 Deactivate();
         }
         public override void Activate()

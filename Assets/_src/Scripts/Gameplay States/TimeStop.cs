@@ -29,15 +29,15 @@ namespace KaitoMajima
 
         [SerializeField] private Ease easeType = Ease.Linear;
 
-        [SerializeField] private PlayOnStartTween playOnStart = PlayOnStartTween.None;
+        [SerializeField] private PlayOnEnableTween playOnEnable = PlayOnEnableTween.None;
 
         private Tween currentTween;
 
-        private void Start()
+        private void OnEnable()
         {
             PauseController.onPauseTriggered += StopTween;
 
-            if(playOnStart == PlayOnStartTween.Activate)
+            if(playOnEnable == PlayOnEnableTween.Activate)
                 Activate();
         }
 
