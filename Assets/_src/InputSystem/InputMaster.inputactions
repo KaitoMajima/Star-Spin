@@ -653,25 +653,17 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Fire",
+                    "name": "FireA",
                     "type": "Button",
-                    "id": "5a0f2ef8-1606-4cea-b8bc-ceeb6ef37d29",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "Press"
-                },
-                {
-                    "name": "Jump",
-                    "type": "Button",
-                    "id": "3058c0bc-0084-48b4-8d8d-befb94f0c114",
+                    "id": "d52fa942-1228-4f3e-9ec4-3955d463dad9",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
                 },
                 {
-                    "name": "Interact",
+                    "name": "FireB",
                     "type": "Button",
-                    "id": "9462c5b7-81bf-4102-a357-e054af41ca83",
+                    "id": "52497ece-0968-4edd-801d-ddf05fbd05e1",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -812,56 +804,12 @@
                 },
                 {
                     "name": "",
-                    "id": "83a08ce2-bbbb-4032-8243-acc59351fbfc",
-                    "path": "<Mouse>/leftButton",
+                    "id": "41faad26-8d03-4649-ab14-be60564c9002",
+                    "path": "<Pen>/position",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keyboard and Mouse",
-                    "action": "Fire",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "3b29cf54-2be6-4f1d-9809-69093219e732",
-                    "path": "<Gamepad>/rightTrigger",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
-                    "action": "Fire",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "f08d0faa-e564-4fa9-926a-19a5a762c290",
-                    "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard and Mouse",
-                    "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "75eb93bd-aadd-4f2c-8f41-49c138f9bf54",
-                    "path": "<Keyboard>/z",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard and Mouse",
-                    "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "2aece685-57c0-4328-a051-9f25f867d956",
-                    "path": "<Gamepad>/buttonSouth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
-                    "action": "Jump",
+                    "groups": "",
+                    "action": "Aim",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -878,12 +826,45 @@
                 },
                 {
                     "name": "",
-                    "id": "9e79b9e2-3c41-498b-9238-54238ba1825a",
+                    "id": "963696aa-a25c-4ae4-9044-97dcea618384",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "FireA",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fc433b66-bcb3-456c-9dc3-2db10e6e6f36",
                     "path": "<Keyboard>/z",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Interact",
+                    "action": "FireA",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "56d86ffa-2cb4-4336-b8ca-073eae192e4c",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "FireB",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2b3df0d7-2167-413c-a29e-99a1acd8b33e",
+                    "path": "<Keyboard>/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "FireB",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

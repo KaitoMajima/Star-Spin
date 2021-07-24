@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using DG.Tweening;
+using System;
 
 namespace KaitoMajima
 {
@@ -19,6 +20,8 @@ namespace KaitoMajima
 
         [SerializeField]
         private TweenScaleValueSettings tweenScaleValueSettings = TweenScaleValueSettings.Default;
+
+        [SerializeField] private bool destroyOnEndDeactivate;
 
         private Vector3 originalScale;
         
@@ -62,8 +65,14 @@ namespace KaitoMajima
         public override void Deactivate()
         {
             scaledTransform.DOKill();
-            scaledTransform.DOScale(originalScale, tweenSettings.duration).SetEase(tweenSettings.easeType);
+            scaledTransform.DOScale(originalScale, tweenSettings.duration).SetEase(tweenSettings.easeType).OnComplete(DestroyOnEndDeactivate);
+
+
         }
 
+        private void DestroyOnEndDeactivate()
+        {
+            Destroy(gameObject);
+        }
     }
 }

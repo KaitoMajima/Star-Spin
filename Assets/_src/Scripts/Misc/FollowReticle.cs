@@ -7,11 +7,13 @@ namespace KaitoMajima
 {
     public class FollowReticle : MonoBehaviour
     {
-        [SerializeField] private PlayerInput playerInput;
+        private PlayerInput playerInput;
+        [SerializeField] private TransformReference playerDynamicReference;
         
         [SerializeField] private Transform reticleTransform;
 
-        [SerializeField] private Camera mainCamera;
+        private Camera mainCamera;
+        [SerializeField] private TransformReference cameraDynamicReference;
         private Vector2 mousePosition;
         private InputAction aimAction;
 
@@ -19,6 +21,10 @@ namespace KaitoMajima
 
         private void Start()
         {
+            playerInput = playerDynamicReference.Value.GetComponent<PlayerInput>();
+            mainCamera = cameraDynamicReference.Value.GetComponent<Camera>();
+
+            
             var playerActionMap = playerInput.actions.FindActionMap("Player");
 
             aimAction = playerActionMap.FindAction("Aim");

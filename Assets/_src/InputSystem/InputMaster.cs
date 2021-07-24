@@ -666,25 +666,17 @@ public class @InputMaster : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""Fire"",
+                    ""name"": ""FireA"",
                     ""type"": ""Button"",
-                    ""id"": ""5a0f2ef8-1606-4cea-b8bc-ceeb6ef37d29"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": ""Press""
-                },
-                {
-                    ""name"": ""Jump"",
-                    ""type"": ""Button"",
-                    ""id"": ""3058c0bc-0084-48b4-8d8d-befb94f0c114"",
+                    ""id"": ""d52fa942-1228-4f3e-9ec4-3955d463dad9"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""Interact"",
+                    ""name"": ""FireB"",
                     ""type"": ""Button"",
-                    ""id"": ""9462c5b7-81bf-4102-a357-e054af41ca83"",
+                    ""id"": ""52497ece-0968-4edd-801d-ddf05fbd05e1"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -825,56 +817,12 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""83a08ce2-bbbb-4032-8243-acc59351fbfc"",
-                    ""path"": ""<Mouse>/leftButton"",
+                    ""id"": ""41faad26-8d03-4649-ab14-be60564c9002"",
+                    ""path"": ""<Pen>/position"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Keyboard and Mouse"",
-                    ""action"": ""Fire"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""3b29cf54-2be6-4f1d-9809-69093219e732"",
-                    ""path"": ""<Gamepad>/rightTrigger"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Gamepad"",
-                    ""action"": ""Fire"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""f08d0faa-e564-4fa9-926a-19a5a762c290"",
-                    ""path"": ""<Keyboard>/space"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard and Mouse"",
-                    ""action"": ""Jump"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""75eb93bd-aadd-4f2c-8f41-49c138f9bf54"",
-                    ""path"": ""<Keyboard>/z"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard and Mouse"",
-                    ""action"": ""Jump"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""2aece685-57c0-4328-a051-9f25f867d956"",
-                    ""path"": ""<Gamepad>/buttonSouth"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Gamepad"",
-                    ""action"": ""Jump"",
+                    ""groups"": """",
+                    ""action"": ""Aim"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -891,12 +839,45 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""9e79b9e2-3c41-498b-9238-54238ba1825a"",
+                    ""id"": ""963696aa-a25c-4ae4-9044-97dcea618384"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FireA"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""fc433b66-bcb3-456c-9dc3-2db10e6e6f36"",
                     ""path"": ""<Keyboard>/z"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Interact"",
+                    ""action"": ""FireA"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""56d86ffa-2cb4-4336-b8ca-073eae192e4c"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FireB"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2b3df0d7-2167-413c-a29e-99a1acd8b33e"",
+                    ""path"": ""<Keyboard>/x"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FireB"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -956,9 +937,8 @@ public class @InputMaster : IInputActionCollection, IDisposable
         m_Player_Movement = m_Player.FindAction("Movement", throwIfNotFound: true);
         m_Player_Aim = m_Player.FindAction("Aim", throwIfNotFound: true);
         m_Player_JoystickAim = m_Player.FindAction("Joystick Aim", throwIfNotFound: true);
-        m_Player_Fire = m_Player.FindAction("Fire", throwIfNotFound: true);
-        m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
-        m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
+        m_Player_FireA = m_Player.FindAction("FireA", throwIfNotFound: true);
+        m_Player_FireB = m_Player.FindAction("FireB", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -1173,9 +1153,8 @@ public class @InputMaster : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_Movement;
     private readonly InputAction m_Player_Aim;
     private readonly InputAction m_Player_JoystickAim;
-    private readonly InputAction m_Player_Fire;
-    private readonly InputAction m_Player_Jump;
-    private readonly InputAction m_Player_Interact;
+    private readonly InputAction m_Player_FireA;
+    private readonly InputAction m_Player_FireB;
     public struct PlayerActions
     {
         private @InputMaster m_Wrapper;
@@ -1183,9 +1162,8 @@ public class @InputMaster : IInputActionCollection, IDisposable
         public InputAction @Movement => m_Wrapper.m_Player_Movement;
         public InputAction @Aim => m_Wrapper.m_Player_Aim;
         public InputAction @JoystickAim => m_Wrapper.m_Player_JoystickAim;
-        public InputAction @Fire => m_Wrapper.m_Player_Fire;
-        public InputAction @Jump => m_Wrapper.m_Player_Jump;
-        public InputAction @Interact => m_Wrapper.m_Player_Interact;
+        public InputAction @FireA => m_Wrapper.m_Player_FireA;
+        public InputAction @FireB => m_Wrapper.m_Player_FireB;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1204,15 +1182,12 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 @JoystickAim.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJoystickAim;
                 @JoystickAim.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJoystickAim;
                 @JoystickAim.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJoystickAim;
-                @Fire.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire;
-                @Fire.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire;
-                @Fire.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire;
-                @Jump.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
-                @Jump.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
-                @Jump.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
-                @Interact.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteract;
-                @Interact.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteract;
-                @Interact.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteract;
+                @FireA.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFireA;
+                @FireA.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFireA;
+                @FireA.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFireA;
+                @FireB.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFireB;
+                @FireB.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFireB;
+                @FireB.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFireB;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -1226,15 +1201,12 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 @JoystickAim.started += instance.OnJoystickAim;
                 @JoystickAim.performed += instance.OnJoystickAim;
                 @JoystickAim.canceled += instance.OnJoystickAim;
-                @Fire.started += instance.OnFire;
-                @Fire.performed += instance.OnFire;
-                @Fire.canceled += instance.OnFire;
-                @Jump.started += instance.OnJump;
-                @Jump.performed += instance.OnJump;
-                @Jump.canceled += instance.OnJump;
-                @Interact.started += instance.OnInteract;
-                @Interact.performed += instance.OnInteract;
-                @Interact.canceled += instance.OnInteract;
+                @FireA.started += instance.OnFireA;
+                @FireA.performed += instance.OnFireA;
+                @FireA.canceled += instance.OnFireA;
+                @FireB.started += instance.OnFireB;
+                @FireB.performed += instance.OnFireB;
+                @FireB.canceled += instance.OnFireB;
             }
         }
     }
@@ -1282,8 +1254,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
         void OnMovement(InputAction.CallbackContext context);
         void OnAim(InputAction.CallbackContext context);
         void OnJoystickAim(InputAction.CallbackContext context);
-        void OnFire(InputAction.CallbackContext context);
-        void OnJump(InputAction.CallbackContext context);
-        void OnInteract(InputAction.CallbackContext context);
+        void OnFireA(InputAction.CallbackContext context);
+        void OnFireB(InputAction.CallbackContext context);
     }
 }
