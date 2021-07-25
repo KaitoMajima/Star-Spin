@@ -7,6 +7,7 @@ namespace KaitoMajima
     public class TowerBrain : MonoBehaviour
     {
         [SerializeField] private List<RingDetection> rings = new List<RingDetection>();
+        public Transform ringTowerTransform;
 
         public void AddRing(RingDetection ring)
         {

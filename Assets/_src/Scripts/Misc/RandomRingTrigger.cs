@@ -26,7 +26,7 @@ namespace KaitoMajima
 
             yield return new WaitForSeconds(waitingTime);
 
-            var ring = Instantiate(ringPrefab, ringTowerTransform.position, Quaternion.identity, ringTowerTransform);
+            var ring = Instantiate(ringPrefab, ringTowerTransform.position, ringPrefab.transform.rotation, ringTowerTransform);
             var ringScript = ring.GetComponent<RingDetection>();
 
             towerBrain.AddRing(ringScript);

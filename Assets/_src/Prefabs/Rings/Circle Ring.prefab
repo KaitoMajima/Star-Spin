@@ -296,7 +296,7 @@ Transform:
   m_GameObject: {fileID: 3922979722687998077}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -2.1, y: 2.22, z: 10}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1}
   m_Children:
   - {fileID: 4371030684238011820}
   m_Father: {fileID: 0}
@@ -369,7 +369,7 @@ MonoBehaviour:
   scaledTransform: {fileID: 8999638352556835797}
   playOnEnable: 2
   tweenSettings:
-    duration: 0.7
+    duration: 1
     easeType: 1
     useLoops: 0
     ignoreTimeScale: 0
@@ -396,7 +396,7 @@ MonoBehaviour:
   playOnEnable: 1
   destroyOnEndDeactivate: 0
   tweenSettings:
-    duration: 0.2
+    duration: 0.4
     easeType: 2
     useLoops: 0
     ignoreTimeScale: 0
@@ -416,10 +416,7 @@ MonoBehaviour:
   brainParent: {fileID: 0}
   ringState: 0
   ringMode: 0
-  earlyGoodWindow: 0.3
-  perfectWindow: 0.42
-  lateWindow: 0.56
-  missWindow: 0.65
+  timingOptions: {fileID: 11400000, guid: c83ceef2924d54744a51e635c2accc1f, type: 2}
   earlyHitFeedback: {fileID: 7021738275314162735}
   perfectHitFeedback: {fileID: 6217809745750261868}
   lateHitFeedback: {fileID: 5234469790852547477}

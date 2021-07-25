@@ -65,6 +65,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rings: []
+  ringTowerTransform: {fileID: 8363101785264458881}
 --- !u!58 &4403064058464731845
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -80,7 +81,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.6130643
 --- !u!1 &1782160476078879657
 GameObject:
   m_ObjectHideFlags: 0
@@ -190,7 +191,7 @@ Transform:
   m_GameObject: {fileID: 1782160477000093311}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 11.97128}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1}
   m_Children: []
   m_Father: {fileID: 1782160475464603465}
   m_RootOrder: 0

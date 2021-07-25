@@ -526,14 +526,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6288125639002578747}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
   m_LocalPosition: {x: 0, y: 0, z: 10}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
+  m_LocalScale: {x: 1.1, y: 1.1, z: 1}
   m_Children:
   - {fileID: 218061790848218347}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 45}
 --- !u!212 &3984295822608150949
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -601,7 +601,7 @@ MonoBehaviour:
   scaledTransform: {fileID: 2150454324391015571}
   playOnEnable: 2
   tweenSettings:
-    duration: 0.7
+    duration: 1
     easeType: 1
     useLoops: 0
     ignoreTimeScale: 0
@@ -628,7 +628,7 @@ MonoBehaviour:
   playOnEnable: 1
   destroyOnEndDeactivate: 0
   tweenSettings:
-    duration: 0.2
+    duration: 0.4
     easeType: 2
     useLoops: 0
     ignoreTimeScale: 0
@@ -648,10 +648,7 @@ MonoBehaviour:
   brainParent: {fileID: 0}
   ringState: 0
   ringMode: 1
-  earlyGoodWindow: 0.3
-  perfectWindow: 0.42
-  lateWindow: 0.56
-  missWindow: 0.65
+  timingOptions: {fileID: 11400000, guid: c83ceef2924d54744a51e635c2accc1f, type: 2}
   earlyHitFeedback: {fileID: 6935258901292050586}
   perfectHitFeedback: {fileID: 7965306987643244274}
   lateHitFeedback: {fileID: 1116587545534774099}

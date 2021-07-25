@@ -28,10 +28,8 @@ namespace KaitoMajima
             Square = 1
         }
         public RingMode ringMode = RingMode.Circle;
-        [SerializeField] private float earlyGoodWindow = 0.15f;
-        [SerializeField] private float perfectWindow = 0.2f;
-        [SerializeField] private float lateWindow = 0.4f;
-        [SerializeField] private float missWindow = 0.6f;
+
+        [SerializeField] private RingTimingOptions timingOptions;
 
         [Header("Ring Hit Feedbacks")]
         [SerializeField] private MMFeedbacks earlyHitFeedback;
@@ -54,13 +52,13 @@ namespace KaitoMajima
             while(true)
             {
                 timer += Time.deltaTime;
-                if(ringState == RingState.SuperEarly && timer >= earlyGoodWindow)
+                if(ringState == RingState.SuperEarly && timer >= timingOptions.earlyGoodWindow)
                     ringState = RingState.EarlyGood;
-                if(ringState == RingState.EarlyGood && timer >= perfectWindow)
+                if(ringState == RingState.EarlyGood && timer >= timingOptions.perfectWindow)
                     ringState = RingState.Perfect;
-                if(ringState == RingState.Perfect && timer >= lateWindow)
+                if(ringState == RingState.Perfect && timer >= timingOptions.lateWindow)
                     ringState = RingState.LateGood;
-                if(ringState == RingState.LateGood && timer >= missWindow)
+                if(ringState == RingState.LateGood && timer >= timingOptions.missWindow)
                 {
                     ringState = RingState.Miss;
                     MissRing();
