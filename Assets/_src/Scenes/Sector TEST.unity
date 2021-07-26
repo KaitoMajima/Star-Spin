@@ -683,6 +683,7 @@ MonoBehaviour:
   - {fileID: 1010384500}
   circleRingPrefab: {fileID: 3922979722687998077, guid: af0dca0fcab2955478e255fc65509c01, type: 3}
   squareRingPrefab: {fileID: 6288125639002578747, guid: 956500011384c9444b5ae04bab7990b5, type: 3}
+  starRingPrefab: {fileID: 3922979722687998077, guid: 4d19379211d5c8142b5e89262b063b4a, type: 3}
   laneControllers: []
   eventID: DTB-Hello(PlayableTrack)
   timingOptions: {fileID: 11400000, guid: c83ceef2924d54744a51e635c2accc1f, type: 2}
@@ -1843,9 +1844,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -612454531
+  m_SortingLayer: 1
+  m_SortingOrder: 10
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.69803923}
   m_FlipX: 0
@@ -12992,7 +12993,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.7
+  m_Intensity: 2
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 7daf7edb

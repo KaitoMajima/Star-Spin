@@ -9,6 +9,7 @@ namespace KaitoMajima
         [SerializeField] private List<RingDetection> rings = new List<RingDetection>();
         public Transform ringTowerTransform;
 
+
         public void AddRing(RingDetection ring)
         {
             rings.Add(ring);
@@ -29,6 +30,12 @@ namespace KaitoMajima
                 return;
             
             int ringMode = (int)currentRing.ringMode;
+            if(ringMode == (int)RingDetection.RingMode.Star)
+            {
+                currentRing.StarHit(fireMode);
+                return;
+            }
+                
             if(fireMode == ringMode)
                 currentRing.HitRing();
             else

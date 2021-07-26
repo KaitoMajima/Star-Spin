@@ -354,7 +354,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  - {fileID: 2100000, guid: 92f441a53f711d34a9b9c70765776159, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -842,7 +842,7 @@ MonoBehaviour:
     Quantized: 0
     TargetBPM: 120
   DebugActive: 0
-  GameObjectToInstantiate: {fileID: 3753534482447500485, guid: ddba150efb81d6a4e91e759808677398, type: 3}
+  GameObjectToInstantiate: {fileID: 5368209423636152676, guid: 44564fcb2137e5e4cb9b4f0d9cc2cced, type: 3}
   PositionMode: 0
   TargetTransform: {fileID: 0}
   TargetPosition: {x: 0, y: 0, z: 0}

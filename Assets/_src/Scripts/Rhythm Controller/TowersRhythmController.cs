@@ -24,6 +24,8 @@ namespace KaitoMajima
         }
         [SerializeField] private GameObject circleRingPrefab;
         [SerializeField] private GameObject squareRingPrefab;
+        [SerializeField] private GameObject starRingPrefab;
+
 
         [SerializeField] private List<LaneController> laneControllers;
         [EventID] public string eventID;
@@ -81,7 +83,9 @@ namespace KaitoMajima
         private const int CIRCLE_FORWARD = 4;
         private const int SQUARE_FORWARD = 5;
 
-
+        private const int STAR_BACK = 10;
+        private const int STAR_NEUTRAL = 11;
+        private const int STAR_FORWARD = 12;
 
         private void Start()
         {
@@ -145,6 +149,17 @@ namespace KaitoMajima
                 case SQUARE_FORWARD:
                     AdvanceTower();
                     SpawnRing(squareRingPrefab);
+                    break;
+                case STAR_BACK:
+                    RegressTower();
+                    SpawnRing(starRingPrefab);
+                    break;  
+                case STAR_NEUTRAL:
+                    SpawnRing(starRingPrefab);
+                    break;
+                case STAR_FORWARD:
+                    AdvanceTower();
+                    SpawnRing(starRingPrefab);
                     break;
             }
         }

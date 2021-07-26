@@ -27,6 +27,11 @@ MonoBehaviour:
     samplesPerBeat: 2646000
     beatsPerMeasure: 4
     bStartNewMeasure: 1
+  - sectionName: New Section
+    startSample: 0
+    samplesPerBeat: 2646000
+    beatsPerMeasure: 4
+    bStartNewMeasure: 1
   - sectionName: Song
     startSample: 51146
     samplesPerBeat: 20671.875

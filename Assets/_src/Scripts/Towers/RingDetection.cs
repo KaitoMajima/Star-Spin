@@ -25,7 +25,8 @@ namespace KaitoMajima
         public enum RingMode
         {
             Circle = 0,
-            Square = 1
+            Square = 1,
+            Star = 2
         }
         public RingMode ringMode = RingMode.Circle;
 
@@ -42,6 +43,15 @@ namespace KaitoMajima
         [SerializeField] private MMFeedbacks hitFeedback;
 
         private bool hasBeenHit;
+
+        private bool starFireAPressed;
+        private bool starFireBPressed;
+
+        private float doubleClickTime = 0.25f;
+        private float doubleClickTimer;
+
+        private Coroutine doubleClickCoroutine;
+
         private float timer;
         private Coroutine timerCoroutine;
         private void Start()
@@ -94,6 +104,34 @@ namespace KaitoMajima
             }
             RemoveRing();
         }
+
+        public void StarHit(int fireMode)
+        {
+            if(fireMode == (int)RingMode.Circle)
+                starFireAPressed = true;
+            if(fireMode == (int)RingMode.Square)
+                starFireBPressed = true;
+            
+            if(starFireAPressed && starFireBPressed)
+                HitRing();
+            
+            if(doubleClickTimer > 0)
+                return;
+
+            doubleClickCoroutine = StartCoroutine(DoubleClickTimer());
+        }
+
+        private IEnumerator DoubleClickTimer()
+        {
+            doubleClickTimer = doubleClickTime;
+            while (doubleClickTimer > 0)
+            {
+                doubleClickTimer -= Time.deltaTime;
+                yield return null;
+            } 
+            MisfireRing();
+        }
+
         public void MisfireRing()
         {
             StopCoroutine(timerCoroutine);
@@ -115,6 +153,8 @@ namespace KaitoMajima
             if(brainParent == null)
                 return;
             brainParent.RemoveRing(this);
+            if(doubleClickCoroutine != null)
+                StopCoroutine(doubleClickCoroutine);
             StartCoroutine(SkipFrame(() => Destroy(gameObject)));
         }
 
