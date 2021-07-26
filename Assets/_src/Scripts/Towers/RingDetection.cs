@@ -38,6 +38,9 @@ namespace KaitoMajima
         [SerializeField] private MMFeedbacks misfireHitFeedback;
         [SerializeField] private MMFeedbacks missHitFeedback;
 
+        [Header("Ring Mode Hit Feedbacks")]
+        [SerializeField] private MMFeedbacks hitFeedback;
+
         private bool hasBeenHit;
         private float timer;
         private Coroutine timerCoroutine;
@@ -75,12 +78,15 @@ namespace KaitoMajima
             {
                 case RingState.EarlyGood:
                     earlyHitFeedback?.PlayFeedbacks();
+                    SucessfulHitRing();
                     break;
                 case RingState.Perfect:
                     perfectHitFeedback?.PlayFeedbacks();
+                    SucessfulHitRing();
                     break;
                 case RingState.LateGood:
                     lateHitFeedback?.PlayFeedbacks();
+                    SucessfulHitRing();
                     break;
                 case RingState.SuperEarly:
                     missHitFeedback?.PlayFeedbacks();
@@ -110,6 +116,11 @@ namespace KaitoMajima
                 return;
             brainParent.RemoveRing(this);
             StartCoroutine(SkipFrame(() => Destroy(gameObject)));
+        }
+
+        private void SucessfulHitRing()
+        {
+            hitFeedback?.PlayFeedbacks();
         }
         private IEnumerator SkipFrame(Action callback)
         {
