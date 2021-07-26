@@ -34,6 +34,11 @@ namespace KaitoMajima
 
         [SerializeField] private RingTimingOptions timingOptions;
 
+        [Header("Debug Mode")]
+
+        [SerializeField] private bool debugMode;
+        [SerializeField] private float timeSkip;
+
         public int DelayedSampleTime
 		{
 			get
@@ -112,7 +117,30 @@ namespace KaitoMajima
             if(leadInTimeLeft > 0)
                 leadInTimeLeft -= Time.deltaTime;
             else
-                if(!musicAudioSource.isPlaying) musicAudioSource.Play();
+            {
+                if(!musicAudioSource.isPlaying)
+                {
+                    if(debugMode)
+                    {
+                        musicAudioSource.time = timeSkip;
+                        int sampleSkip = (int)(timeSkip * SampleRate);
+
+                        foreach (var rawEvent in rawKoreographyEvents)
+                        {
+                            if(rawEvent.StartSample < sampleSkip)
+                            {
+                                koreographyEventIndex++;
+                                continue;
+                            }
+                        } 
+                    }
+                        
+                    musicAudioSource.Play();  
+                }
+                
+                
+            }
+                
             
             if(koreographyEventIndex >= rawKoreographyEvents.Count)
                 return;
