@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 453eee4bfc8d6314ab65aa919d829fd5, type: 3}
   m_Name: Main Ring Timing Options
   m_EditorClassIdentifier: 
-  earlyGoodWindow: 0.55
-  perfectWindow: 0.66
-  lateWindow: 0.84
-  missWindow: 0.95
+  earlyGoodWindow: 1.05
+  perfectWindow: 1.16
+  lateWindow: 1.34
+  missWindow: 1.45
