@@ -102,7 +102,7 @@ namespace KaitoMajima
         {
             currentTowerIndex = 0;
 
-            leadInTime = timingOptions.perfectWindow;
+            leadInTime = timingOptions.PerfectWindow;
             leadInTimeLeft = leadInTime;
 
             playingKoreo = Koreographer.Instance.GetKoreographyAtIndex(0);

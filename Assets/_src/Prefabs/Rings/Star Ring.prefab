@@ -309,9 +309,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8999638352556835797}
   - component: {fileID: 6231255955339151075}
-  - component: {fileID: 2409513646624566882}
-  - component: {fileID: 6443994960622466573}
   - component: {fileID: 8327877612525383706}
+  - component: {fileID: 8512869387096251561}
+  - component: {fileID: 8110983015461703764}
   m_Layer: 0
   m_Name: Star Ring
   m_TagString: Untagged
@@ -328,7 +328,7 @@ Transform:
   m_GameObject: {fileID: 3922979722687998077}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -2.1, y: 2.22, z: 10}
-  m_LocalScale: {x: 1.35, y: 1.35, z: 1}
+  m_LocalScale: {x: 1.4, y: 1.4, z: 1}
   m_Children:
   - {fileID: 4371030684238011820}
   m_Father: {fileID: 0}
@@ -386,53 +386,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2409513646624566882
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3922979722687998077}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e723254ae31af7c40ba7e7354db395e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scaledTransform: {fileID: 8999638352556835797}
-  playOnEnable: 2
-  tweenSettings:
-    duration: 1.5
-    easeType: 1
-    useLoops: 0
-    ignoreTimeScale: 0
-    loopType: 0
-  tweenScaleValueSettings:
-    resetValues: 1
-    scaleType: 1
-    rateScale: 2
-    fixedScale: {x: 0, y: 0}
-  destroyOnEndDeactivate: 1
---- !u!114 &6443994960622466573
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3922979722687998077}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca9ed2ad65b488c438cccd5a337bf556, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 6231255955339151075}
-  playOnEnable: 1
-  destroyOnEndDeactivate: 0
-  tweenSettings:
-    duration: 1.05
-    easeType: 2
-    useLoops: 0
-    ignoreTimeScale: 0
-    loopType: 0
 --- !u!114 &8327877612525383706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -455,6 +408,55 @@ MonoBehaviour:
   misfireHitFeedback: {fileID: 1279904419954047869}
   missHitFeedback: {fileID: 399927628598653952}
   hitFeedback: {fileID: 5442725549512655841}
+--- !u!114 &8512869387096251561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3922979722687998077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68a2070fe00fb7d4b9d28f4c85dbadff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scaledTransform: {fileID: 8999638352556835797}
+  playOnEnable: 1
+  ringTimingOptions: {fileID: 11400000, guid: c83ceef2924d54744a51e635c2accc1f, type: 2}
+  tweenSettings:
+    duration: 1.8
+    easeType: 1
+    useLoops: 0
+    ignoreTimeScale: 0
+    loopType: 0
+  tweenScaleValueSettings:
+    resetValues: 0
+    scaleType: 1
+    rateScale: 2
+    fixedScale: {x: 0, y: 0}
+  destroyOnEndDeactivate: 1
+--- !u!114 &8110983015461703764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3922979722687998077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2a87429266262945b1fa808eac51d52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 6231255955339151075}
+  playOnEnable: 1
+  destroyOnEndDeactivate: 0
+  tweenSettings:
+    duration: 1
+    easeType: 2
+    useLoops: 0
+    ignoreTimeScale: 0
+    loopType: 0
+  ringTimingOptions: {fileID: 11400000, guid: c83ceef2924d54744a51e635c2accc1f, type: 2}
 --- !u!1 &4000650852903217727
 GameObject:
   m_ObjectHideFlags: 0

@@ -65,13 +65,13 @@ namespace KaitoMajima
             while(true)
             {
                 timer += Time.deltaTime;
-                if(ringState == RingState.SuperEarly && timer >= timingOptions.earlyGoodWindow)
+                if(ringState == RingState.SuperEarly && timer >= timingOptions.EarlyGoodWindow)
                     ringState = RingState.EarlyGood;
-                if(ringState == RingState.EarlyGood && timer >= timingOptions.perfectWindow)
+                if(ringState == RingState.EarlyGood && timer >= timingOptions.PerfectWindow)
                     ringState = RingState.Perfect;
-                if(ringState == RingState.Perfect && timer >= timingOptions.lateWindow)
+                if(ringState == RingState.Perfect && timer >= timingOptions.LateWindow)
                     ringState = RingState.LateGood;
-                if(ringState == RingState.LateGood && timer >= timingOptions.missWindow)
+                if(ringState == RingState.LateGood && timer >= timingOptions.MissWindow)
                 {
                     ringState = RingState.Miss;
                     MissRing();

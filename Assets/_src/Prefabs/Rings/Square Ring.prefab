@@ -506,9 +506,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2150454324391015571}
   - component: {fileID: 3984295822608150949}
-  - component: {fileID: 4630437446287743268}
-  - component: {fileID: 6554874544272675803}
   - component: {fileID: 5705996095734062618}
+  - component: {fileID: 1580723672020826243}
+  - component: {fileID: 8965879538465974578}
   m_Layer: 0
   m_Name: Square Ring
   m_TagString: Untagged
@@ -525,7 +525,7 @@ Transform:
   m_GameObject: {fileID: 6288125639002578747}
   m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
   m_LocalPosition: {x: 0, y: 0, z: 10}
-  m_LocalScale: {x: 1.35, y: 1.35, z: 1}
+  m_LocalScale: {x: 1.4, y: 1.4, z: 1}
   m_Children:
   - {fileID: 218061790848218347}
   m_Father: {fileID: 0}
@@ -583,53 +583,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4630437446287743268
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6288125639002578747}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e723254ae31af7c40ba7e7354db395e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scaledTransform: {fileID: 2150454324391015571}
-  playOnEnable: 2
-  tweenSettings:
-    duration: 1.5
-    easeType: 1
-    useLoops: 0
-    ignoreTimeScale: 0
-    loopType: 0
-  tweenScaleValueSettings:
-    resetValues: 1
-    scaleType: 1
-    rateScale: 2
-    fixedScale: {x: 0, y: 0}
-  destroyOnEndDeactivate: 1
---- !u!114 &6554874544272675803
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6288125639002578747}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca9ed2ad65b488c438cccd5a337bf556, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 3984295822608150949}
-  playOnEnable: 1
-  destroyOnEndDeactivate: 0
-  tweenSettings:
-    duration: 1.05
-    easeType: 2
-    useLoops: 0
-    ignoreTimeScale: 0
-    loopType: 0
 --- !u!114 &5705996095734062618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -652,6 +605,55 @@ MonoBehaviour:
   misfireHitFeedback: {fileID: 3376480849475942972}
   missHitFeedback: {fileID: 5208038534455483863}
   hitFeedback: {fileID: 3280183594009425350}
+--- !u!114 &1580723672020826243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6288125639002578747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68a2070fe00fb7d4b9d28f4c85dbadff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scaledTransform: {fileID: 2150454324391015571}
+  playOnEnable: 1
+  ringTimingOptions: {fileID: 11400000, guid: c83ceef2924d54744a51e635c2accc1f, type: 2}
+  tweenSettings:
+    duration: 1.8
+    easeType: 1
+    useLoops: 0
+    ignoreTimeScale: 0
+    loopType: 0
+  tweenScaleValueSettings:
+    resetValues: 0
+    scaleType: 1
+    rateScale: 2
+    fixedScale: {x: 0, y: 0}
+  destroyOnEndDeactivate: 1
+--- !u!114 &8965879538465974578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6288125639002578747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2a87429266262945b1fa808eac51d52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 3984295822608150949}
+  playOnEnable: 1
+  destroyOnEndDeactivate: 0
+  tweenSettings:
+    duration: 1
+    easeType: 2
+    useLoops: 0
+    ignoreTimeScale: 0
+    loopType: 0
+  ringTimingOptions: {fileID: 11400000, guid: c83ceef2924d54744a51e635c2accc1f, type: 2}
 --- !u!1 &6290834757514738807
 GameObject:
   m_ObjectHideFlags: 0
