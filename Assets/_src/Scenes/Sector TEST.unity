@@ -5729,7 +5729,7 @@ MonoBehaviour:
   laneControllers: []
   eventID: DTB-Hello To The Your First Game(Playable)
   timingOptions: {fileID: 11400000, guid: c83ceef2924d54744a51e635c2accc1f, type: 2}
-  debugMode: 0
+  debugMode: 1
   timeSkip: 80
   rawKoreographyEvents: []
 --- !u!114 &418300909
