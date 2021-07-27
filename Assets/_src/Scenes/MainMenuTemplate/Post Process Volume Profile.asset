@@ -47,6 +47,25 @@ MonoBehaviour:
   mode:
     m_OverrideState: 1
     m_Value: 2
+--- !u!114 &-2624787725447656875
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81180773991d8724ab7f2d216912b564, type: 3}
+  m_Name: ChromaticAberration
+  m_EditorClassIdentifier: 
+  active: 1
+  m_AdvancedMode: 0
+  intensity:
+    m_OverrideState: 0
+    m_Value: 0
+    min: 0
+    max: 1
 --- !u!114 &-1001669109159893602
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -65,8 +84,8 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: 0.5
   contrast:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: 10
     min: -100
     max: 100
   colorFilter:
@@ -104,6 +123,7 @@ MonoBehaviour:
   - {fileID: -7651746863981785249}
   - {fileID: 5530736975033023986}
   - {fileID: 7917507514573812199}
+  - {fileID: -2624787725447656875}
 --- !u!114 &1563731875107064694
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -124,11 +144,11 @@ MonoBehaviour:
     min: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 1.8
+    m_Value: 3
     min: 0
   scatter:
     m_OverrideState: 0
-    m_Value: 0.7
+    m_Value: 0
     min: 0
     max: 1
   clamp:
@@ -137,7 +157,7 @@ MonoBehaviour:
     min: 0
   tint:
     m_OverrideState: 0
-    m_Value: {r: 0.9369893, g: 1, b: 0.3066038, a: 1}
+    m_Value: {r: 0.030184316, g: 0.013152941, b: 0.043, a: 1}
     hdr: 0
     showAlpha: 0
     showEyeDropper: 1
@@ -181,12 +201,12 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.15
+    m_Value: 0.221
     min: 0
     max: 1
   smoothness:
     m_OverrideState: 1
-    m_Value: 0.566
+    m_Value: 0.778
     min: 0.01
     max: 1
   rounded:
@@ -208,7 +228,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   distance:
     m_OverrideState: 1
-    m_Value: 0.079
+    m_Value: 0.04
     min: 0
     max: 1
   cropToFit:

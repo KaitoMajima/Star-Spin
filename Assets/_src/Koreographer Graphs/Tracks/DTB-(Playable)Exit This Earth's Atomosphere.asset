@@ -1,0 +1,244 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1223223985, guid: aa81bbec85a3f423193272a7c6154986, type: 3}
+  m_Name: DTB-(Playable)Exit This Earth's Atomosphere
+  m_EditorClassIdentifier: 
+  mEventID: DTB-(Playable)Exit This Earth's Atomosphere
+  mEventList:
+  - mStartSample: 91495
+    mEndSample: 91495
+  - mStartSample: 107059
+    mEndSample: 107059
+  - mStartSample: 122624
+    mEndSample: 122624
+  - mStartSample: 138189
+    mEndSample: 138189
+  - mStartSample: 153753
+    mEndSample: 153753
+  - mStartSample: 169318
+    mEndSample: 169318
+  - mStartSample: 184883
+    mEndSample: 184883
+  - mStartSample: 200447
+    mEndSample: 200447
+  - mStartSample: 216012
+    mEndSample: 216012
+  - mStartSample: 231577
+    mEndSample: 231577
+  - mStartSample: 247142
+    mEndSample: 247142
+  - mStartSample: 262706
+    mEndSample: 262706
+  - mStartSample: 278271
+    mEndSample: 278271
+  - mStartSample: 293836
+    mEndSample: 293836
+  - mStartSample: 309400
+    mEndSample: 309400
+  - mStartSample: 319128
+    mEndSample: 319128
+  - mStartSample: 324965
+    mEndSample: 324965
+  - mStartSample: 330802
+    mEndSample: 330802
+  - mStartSample: 336639
+    mEndSample: 336639
+  - mStartSample: 356095
+    mEndSample: 356095
+  - mStartSample: 371659
+    mEndSample: 371659
+  - mStartSample: 387224
+    mEndSample: 387224
+  - mStartSample: 402789
+    mEndSample: 402789
+  - mStartSample: 418353
+    mEndSample: 418353
+  - mStartSample: 433918
+    mEndSample: 433918
+  - mStartSample: 449483
+    mEndSample: 449483
+  - mStartSample: 465047
+    mEndSample: 465047
+  - mStartSample: 480612
+    mEndSample: 480612
+  - mStartSample: 496177
+    mEndSample: 496177
+  - mStartSample: 511742
+    mEndSample: 511742
+  - mStartSample: 527306
+    mEndSample: 527306
+  - mStartSample: 542871
+    mEndSample: 542871
+  - mStartSample: 558436
+    mEndSample: 558436
+  - mStartSample: 581783
+    mEndSample: 581783
+  - mStartSample: 589565
+    mEndSample: 589565
+  - mStartSample: 597347
+    mEndSample: 597347
+  - mStartSample: 612912
+    mEndSample: 612912
+  - mStartSample: 628477
+    mEndSample: 628477
+  - mStartSample: 644042
+    mEndSample: 644042
+  - mStartSample: 659606
+    mEndSample: 659606
+  - mStartSample: 675171
+    mEndSample: 675171
+  - mStartSample: 698518
+    mEndSample: 698518
+  - mStartSample: 721865
+    mEndSample: 721865
+  - mStartSample: 737430
+    mEndSample: 737430
+  - mStartSample: 752995
+    mEndSample: 752995
+  - mStartSample: 768560
+    mEndSample: 768560
+  - mStartSample: 784124
+    mEndSample: 784124
+  - mStartSample: 799689
+    mEndSample: 799689
+  - mStartSample: 815253
+    mEndSample: 815253
+  - mStartSample: 821090
+    mEndSample: 821090
+  - mStartSample: 826927
+    mEndSample: 826927
+  - mStartSample: 832764
+    mEndSample: 832764
+  - mStartSample: 846382
+    mEndSample: 846382
+  - mStartSample: 861947
+    mEndSample: 861947
+  - mStartSample: 877512
+    mEndSample: 877512
+  - mStartSample: 893077
+    mEndSample: 893077
+  - mStartSample: 908641
+    mEndSample: 908641
+  - mStartSample: 924206
+    mEndSample: 924206
+  - mStartSample: 947553
+    mEndSample: 947553
+  - mStartSample: 963118
+    mEndSample: 963118
+  - mStartSample: 978683
+    mEndSample: 978683
+  - mStartSample: 994247
+    mEndSample: 994247
+  - mStartSample: 1009812
+    mEndSample: 1009812
+  - mStartSample: 1025377
+    mEndSample: 1025377
+  - mStartSample: 1033159
+    mEndSample: 1033159
+  - mStartSample: 1040942
+    mEndSample: 1040942
+  - mStartSample: 1048724
+    mEndSample: 1048724
+  - mStartSample: 1056506
+    mEndSample: 1056506
+  - mStartSample: 1064289
+    mEndSample: 1064289
+  - mStartSample: 1072071
+    mEndSample: 1072071
+  _SerializedPayloadTypes:
+  - SonicBloom.Koreo.IntPayload
+  _AssetPayloads: []
+  _AssetPayloadIdxs: 
+  _ColorPayloads: []
+  _ColorPayloadIdxs: 
+  _CurvePayloads: []
+  _CurvePayloadIdxs: 
+  _FloatPayloads: []
+  _FloatPayloadIdxs: 
+  _GradientPayloads: []
+  _GradientPayloadIdxs: 
+  _IntPayloads:
+  - mIntVal: 4
+  - mIntVal: 4
+  - mIntVal: 4
+  - mIntVal: 4
+  - mIntVal: 4
+  - mIntVal: 4
+  - mIntVal: 4
+  - mIntVal: 12
+  - mIntVal: 4
+  - mIntVal: 4
+  - mIntVal: 4
+  - mIntVal: 4
+  - mIntVal: 4
+  - mIntVal: 4
+  - mIntVal: 4
+  - mIntVal: 12
+  - mIntVal: 11
+  - mIntVal: 11
+  - mIntVal: 11
+  - mIntVal: 4
+  - mIntVal: 4
+  - mIntVal: 4
+  - mIntVal: 4
+  - mIntVal: 4
+  - mIntVal: 4
+  - mIntVal: 12
+  - mIntVal: 4
+  - mIntVal: 4
+  - mIntVal: 4
+  - mIntVal: 4
+  - mIntVal: 4
+  - mIntVal: 4
+  - mIntVal: 4
+  - mIntVal: 4
+  - mIntVal: 3
+  - mIntVal: 5
+  - mIntVal: 5
+  - mIntVal: 5
+  - mIntVal: 5
+  - mIntVal: 5
+  - mIntVal: 5
+  - mIntVal: 12
+  - mIntVal: 5
+  - mIntVal: 5
+  - mIntVal: 5
+  - mIntVal: 5
+  - mIntVal: 5
+  - mIntVal: 5
+  - mIntVal: 12
+  - mIntVal: 11
+  - mIntVal: 11
+  - mIntVal: 11
+  - mIntVal: 5
+  - mIntVal: 5
+  - mIntVal: 5
+  - mIntVal: 5
+  - mIntVal: 5
+  - mIntVal: 5
+  - mIntVal: 12
+  - mIntVal: 4
+  - mIntVal: 4
+  - mIntVal: 4
+  - mIntVal: 4
+  - mIntVal: 4
+  - mIntVal: 5
+  - mIntVal: 3
+  - mIntVal: 3
+  - mIntVal: 3
+  - mIntVal: 3
+  - mIntVal: 3
+  _IntPayloadIdxs: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f000000200000002100000022000000230000002400000025000000260000002700000028000000290000002a0000002b0000002c0000002d0000002e0000002f000000300000003100000032000000330000003400000035000000360000003700000038000000390000003a0000003b0000003c0000003d0000003e0000003f000000400000004100000042000000430000004400000045000000
+  _SpectrumPayloads: []
+  _SpectrumPayloadIdxs: 
+  _TextPayloads: []
+  _TextPayloadIdxs: 
