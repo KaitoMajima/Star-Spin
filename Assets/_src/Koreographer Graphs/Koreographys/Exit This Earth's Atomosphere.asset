@@ -87,10 +87,20 @@ MonoBehaviour:
     samplesPerBeat: 2646000
     beatsPerMeasure: 4
     bStartNewMeasure: 1
+  - sectionName: New Section
+    startSample: 0
+    samplesPerBeat: 2646000
+    beatsPerMeasure: 4
+    bStartNewMeasure: 1
+  - sectionName: New Section
+    startSample: 0
+    samplesPerBeat: 2646000
+    beatsPerMeasure: 4
+    bStartNewMeasure: 1
   - sectionName: Song
     startSample: 91495
     samplesPerBeat: 15564.70588235294
     beatsPerMeasure: 4
     bStartNewMeasure: 1
   mTracks:
-  - {fileID: 11400000, guid: fe1906bf60edd7c4786aa83925409c41, type: 2}
+  - {fileID: 11400000, guid: 63f4ca15866c63c41a83b8fb6eead6b9, type: 2}

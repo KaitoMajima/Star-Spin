@@ -11917,6 +11917,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4281630493418267607, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_Events.m_Events.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Sector TEST
+      objectReference: {fileID: 0}
     - target: {fileID: 4281630493591819318, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
       propertyPath: serializationData.Prefab
       value: 
@@ -11925,6 +11929,10 @@ PrefabInstance:
       propertyPath: serializationData.Prefab
       value: 
       objectReference: {fileID: 4281630493816888525, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+    - target: {fileID: 4281630494370146169, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_text
+      value: DEFEND THE BEAT
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
 --- !u!4 &4423787258704567196 stripped

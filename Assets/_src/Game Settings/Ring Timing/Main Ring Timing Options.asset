@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Main Ring Timing Options
   m_EditorClassIdentifier: 
   earlyGoodWindow: 1.05
-  perfectWindow: 1.16
-  lateWindow: 1.34
+  perfectWindow: 1.12
+  lateWindow: 1.38
   missWindow: 1.45
