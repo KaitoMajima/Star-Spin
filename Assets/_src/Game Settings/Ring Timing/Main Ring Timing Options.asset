@@ -17,4 +17,4 @@ MonoBehaviour:
   lateWindow: 1.65
   missWindow: 1.8
   noteDisappearTime: 1.8
-  noteLengthLevel: 0
+  noteLengthLevel: 2

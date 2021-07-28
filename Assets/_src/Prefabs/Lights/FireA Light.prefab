@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7981222986026637261}
   - component: {fileID: 7981222986026637260}
   m_Layer: 0
-  m_Name: Fire A Light
+  m_Name: FireA Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 1
+  m_PointLightOuterRadius: 2
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -124,7 +124,7 @@ MonoBehaviour:
   light2D: {fileID: 7981222986026637261}
   playOnEnable: 2
   tweenSettings:
-    duration: 0.5
+    duration: 1
     easeType: 9
     useLoops: 0
     ignoreTimeScale: 0
