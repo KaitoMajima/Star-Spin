@@ -25,9 +25,6 @@ namespace KaitoMajima
         [SerializeField] private GameObject circleRingPrefab;
         [SerializeField] private GameObject squareRingPrefab;
         [SerializeField] private GameObject starRingPrefab;
-
-
-        [SerializeField] private List<LaneController> laneControllers;
         [EventID] public string eventID;
         private float leadInTime;
         private float leadInTimeLeft;
@@ -140,8 +137,6 @@ namespace KaitoMajima
                 
                 
             }
-                
-            
             if(koreographyEventIndex >= rawKoreographyEvents.Count)
                 return;
             if(DelayedSampleTime >= CurrentKoreographyEvent.StartSample - Delay)

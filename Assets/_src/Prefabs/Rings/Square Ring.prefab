@@ -126,7 +126,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1802907639791008149}
   - component: {fileID: 6935258901292050586}
-  - component: {fileID: 6116697890089313098}
+  - component: {fileID: 3007636884485021566}
+  - component: {fileID: 7362694589158030511}
+  - component: {fileID: 1805171745178237}
   m_Layer: 0
   m_Name: EarlyFeedback
   m_TagString: Untagged
@@ -161,7 +163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Feedbacks:
-  - {fileID: 6116697890089313098}
+  - {fileID: 3007636884485021566}
   InitializationMode: 2
   SafeMode: 3
   Direction: 0
@@ -192,7 +194,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   DebugActive: 0
---- !u!114 &6116697890089313098
+--- !u!114 &3007636884485021566
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -201,11 +203,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1061381731405626343}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bce85594d78e41442a7bfb6ed40e10a8, type: 3}
+  m_Script: {fileID: 11500000, guid: 23a102c1a91e34644aa37f1e4f00c31a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Active: 1
-  Label: Instantiate Object
+  Label: Events
   Chance: 100
   Timing:
     TimescaleMode: 0
@@ -225,13 +227,57 @@ MonoBehaviour:
     Quantized: 0
     TargetBPM: 120
   DebugActive: 0
-  GameObjectToInstantiate: {fileID: 3348078247851350367, guid: 9cf69b23d70bcf94997575e9c6632a64, type: 3}
-  PositionMode: 0
-  TargetTransform: {fileID: 0}
-  TargetPosition: {x: 0, y: 0, z: 0}
-  VfxPositionOffset: {x: 0, y: -0.5, z: 0}
-  VfxCreateObjectPool: 0
-  VfxObjectPoolSize: 5
+  PlayEvents:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7362694589158030511}
+        m_TargetAssemblyTypeName: KaitoMajima.ScoreSender, Assembly-CSharp
+        m_MethodName: SendScore
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 300
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  StopEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  InitializationEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  ResetEvents:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &7362694589158030511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061381731405626343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a272f92730e06f84798830af3c8fa139, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectSpawner: {fileID: 1805171745178237}
+--- !u!114 &1805171745178237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061381731405626343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 556a6b7905c493043be38c45d6c5511a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToSpawn: {fileID: 3348078247851350367, guid: 9cf69b23d70bcf94997575e9c6632a64, type: 3}
+  spawnPoint: {fileID: 1802907639791008149}
 --- !u!1 &1288077552844451202
 GameObject:
   m_ObjectHideFlags: 0
@@ -390,7 +436,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2914456446337452867}
   - component: {fileID: 1116587545534774099}
-  - component: {fileID: 6172090710430200488}
+  - component: {fileID: 1121014795299649232}
+  - component: {fileID: 8744495582423296742}
+  - component: {fileID: 753131355680256355}
   m_Layer: 0
   m_Name: LateFeedback
   m_TagString: Untagged
@@ -425,7 +473,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Feedbacks:
-  - {fileID: 6172090710430200488}
+  - {fileID: 1121014795299649232}
   InitializationMode: 2
   SafeMode: 3
   Direction: 0
@@ -456,7 +504,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   DebugActive: 0
---- !u!114 &6172090710430200488
+--- !u!114 &1121014795299649232
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -465,11 +513,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5945347996593230908}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bce85594d78e41442a7bfb6ed40e10a8, type: 3}
+  m_Script: {fileID: 11500000, guid: 23a102c1a91e34644aa37f1e4f00c31a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Active: 1
-  Label: Instantiate Object
+  Label: Events
   Chance: 100
   Timing:
     TimescaleMode: 0
@@ -489,13 +537,57 @@ MonoBehaviour:
     Quantized: 0
     TargetBPM: 120
   DebugActive: 0
-  GameObjectToInstantiate: {fileID: 3348078247851350367, guid: 9cf69b23d70bcf94997575e9c6632a64, type: 3}
-  PositionMode: 0
-  TargetTransform: {fileID: 0}
-  TargetPosition: {x: 0, y: 0, z: 0}
-  VfxPositionOffset: {x: 0, y: -0.5, z: 0}
-  VfxCreateObjectPool: 0
-  VfxObjectPoolSize: 5
+  PlayEvents:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8744495582423296742}
+        m_TargetAssemblyTypeName: KaitoMajima.ScoreSender, Assembly-CSharp
+        m_MethodName: SendScore
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 300
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  StopEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  InitializationEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  ResetEvents:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &8744495582423296742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5945347996593230908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a272f92730e06f84798830af3c8fa139, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectSpawner: {fileID: 753131355680256355}
+--- !u!114 &753131355680256355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5945347996593230908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 556a6b7905c493043be38c45d6c5511a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToSpawn: {fileID: 3348078247851350367, guid: 9cf69b23d70bcf94997575e9c6632a64, type: 3}
+  spawnPoint: {fileID: 2914456446337452867}
 --- !u!1 &6288125639002578747
 GameObject:
   m_ObjectHideFlags: 0
@@ -667,6 +759,7 @@ GameObject:
   - component: {fileID: 942714097826218552}
   - component: {fileID: 7102381759046900298}
   - component: {fileID: 8463608343456287747}
+  - component: {fileID: 3723596961787208238}
   m_Layer: 0
   m_Name: SquareFeedback
   m_TagString: Untagged
@@ -704,6 +797,7 @@ MonoBehaviour:
   - {fileID: 942714097826218552}
   - {fileID: 7102381759046900298}
   - {fileID: 8463608343456287747}
+  - {fileID: 3723596961787208238}
   InitializationMode: 2
   SafeMode: 3
   Direction: 0
@@ -882,6 +976,48 @@ MonoBehaviour:
     m_DissipationDistance: 1000
     m_PropagationSpeed: 343
   Velocity: {x: 0, y: 0, z: 0}
+--- !u!114 &3723596961787208238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6290834757514738807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8fe7e41857f44348b52714b3238715c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Active: 1
+  Label: Camera Shake
+  Chance: 100
+  Timing:
+    TimescaleMode: 0
+    InitialDelay: 0
+    CooldownDuration: 0
+    NumberOfRepeats: 0
+    RepeatForever: 0
+    DelayBetweenRepeats: 1
+    MMFeedbacksDirectionCondition: 0
+    PlayDirection: 0
+    ConstantIntensity: 0
+    UseIntensityInterval: 0
+    IntensityIntervalMin: 0
+    IntensityIntervalMax: 0
+    Sequence: {fileID: 0}
+    TrackID: 0
+    Quantized: 0
+    TargetBPM: 120
+  DebugActive: 0
+  RepeatUntilStopped: 0
+  Channel: 1
+  CameraShakeProperties:
+    Duration: 0.1
+    Amplitude: 2
+    Frequency: 20
+    AmplitudeX: 10
+    AmplitudeY: 20
+    AmplitudeZ: 0
 --- !u!1 &6350440614195862040
 GameObject:
   m_ObjectHideFlags: 0
@@ -923,7 +1059,9 @@ GameObject:
   m_Component:
   - component: {fileID: 9116209828443363811}
   - component: {fileID: 7965306987643244274}
-  - component: {fileID: 3551734601847228806}
+  - component: {fileID: 5107588823906752555}
+  - component: {fileID: 9180998312350746097}
+  - component: {fileID: 8297616893998061089}
   m_Layer: 0
   m_Name: PerfectFeedback
   m_TagString: Untagged
@@ -958,7 +1096,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Feedbacks:
-  - {fileID: 3551734601847228806}
+  - {fileID: 5107588823906752555}
   InitializationMode: 2
   SafeMode: 3
   Direction: 0
@@ -989,7 +1127,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   DebugActive: 0
---- !u!114 &3551734601847228806
+--- !u!114 &5107588823906752555
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -998,11 +1136,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6802502943269506828}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bce85594d78e41442a7bfb6ed40e10a8, type: 3}
+  m_Script: {fileID: 11500000, guid: 23a102c1a91e34644aa37f1e4f00c31a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Active: 1
-  Label: Instantiate Object
+  Label: Events
   Chance: 100
   Timing:
     TimescaleMode: 0
@@ -1022,13 +1160,57 @@ MonoBehaviour:
     Quantized: 0
     TargetBPM: 120
   DebugActive: 0
-  GameObjectToInstantiate: {fileID: 3577069898918125826, guid: dc39cddf6953d2747ab15ddc08f168a3, type: 3}
-  PositionMode: 0
-  TargetTransform: {fileID: 0}
-  TargetPosition: {x: 0, y: 0, z: 0}
-  VfxPositionOffset: {x: 0, y: -0.5, z: 0}
-  VfxCreateObjectPool: 0
-  VfxObjectPoolSize: 5
+  PlayEvents:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 9180998312350746097}
+        m_TargetAssemblyTypeName: KaitoMajima.ScoreSender, Assembly-CSharp
+        m_MethodName: SendScore
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 450
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  StopEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  InitializationEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  ResetEvents:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &9180998312350746097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6802502943269506828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a272f92730e06f84798830af3c8fa139, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectSpawner: {fileID: 8297616893998061089}
+--- !u!114 &8297616893998061089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6802502943269506828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 556a6b7905c493043be38c45d6c5511a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToSpawn: {fileID: 3577069898918125826, guid: dc39cddf6953d2747ab15ddc08f168a3, type: 3}
+  spawnPoint: {fileID: 9116209828443363811}
 --- !u!1 &7343580862795368432
 GameObject:
   m_ObjectHideFlags: 0

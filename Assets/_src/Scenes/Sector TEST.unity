@@ -5726,7 +5726,6 @@ MonoBehaviour:
   circleRingPrefab: {fileID: 3922979722687998077, guid: af0dca0fcab2955478e255fc65509c01, type: 3}
   squareRingPrefab: {fileID: 6288125639002578747, guid: 956500011384c9444b5ae04bab7990b5, type: 3}
   starRingPrefab: {fileID: 3922979722687998077, guid: 4d19379211d5c8142b5e89262b063b4a, type: 3}
-  laneControllers: []
   eventID: DTB-Hello To The Your First Game(Playable)
   timingOptions: {fileID: 11400000, guid: c83ceef2924d54744a51e635c2accc1f, type: 2}
   debugMode: 0

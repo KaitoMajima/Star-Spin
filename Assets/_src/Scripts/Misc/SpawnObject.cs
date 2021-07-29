@@ -10,14 +10,16 @@ namespace KaitoMajima
 
         [SerializeField] private Transform spawnPoint;
 
-        public void Spawn()
+        public GameObject Spawn()
         {
             var instantiatedObject = Instantiate(objectToSpawn, spawnPoint.position, Quaternion.identity);
+            return instantiatedObject;
         }
 
-        public void ChangeObject(GameObject obj)
+        public GameObject ChangeObject(GameObject obj)
         {
             objectToSpawn = obj;
+            return objectToSpawn;
         }
     }
 }
