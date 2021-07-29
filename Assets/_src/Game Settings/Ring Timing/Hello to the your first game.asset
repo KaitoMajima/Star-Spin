@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 453eee4bfc8d6314ab65aa919d829fd5, type: 3}
   m_Name: Hello to the your first game
   m_EditorClassIdentifier: 
+  backgroundVisibility: 5
   earlyGoodWindow: 1.37
   perfectWindow: 1.5
   lateWindow: 1.85

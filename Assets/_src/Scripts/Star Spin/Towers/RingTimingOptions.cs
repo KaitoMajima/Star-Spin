@@ -9,6 +9,16 @@ namespace KaitoMajima
     [CreateAssetMenu(fileName = "RingTimingOptions", menuName = "Defend The Beat/Options/Ring Timing")]
     public class RingTimingOptions : ScriptableObject
     {
+        [Range(0, 5)]
+        [SerializeField] private int backgroundVisibility = 5;
+
+        public float BackgroundVisibility
+        {
+            get
+            {
+                return 1 -(backgroundVisibility / (float)5);
+            }
+        }
         [SerializeField] private float earlyGoodWindow = 1.2f;
         [SerializeField] private float perfectWindow = 1.3f;
         [SerializeField] private float lateWindow = 1.5f;
