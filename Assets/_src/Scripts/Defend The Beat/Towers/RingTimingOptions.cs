@@ -18,6 +18,8 @@ namespace KaitoMajima
         [Range(0, 6)]
         public int noteLengthLevel = 0;
 
+        public Vector3 noteSize = new Vector3(1.4f, 1.4f, 1);
+
         public float EarlyGoodWindow
         {
             get

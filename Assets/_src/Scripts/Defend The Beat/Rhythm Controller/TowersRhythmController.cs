@@ -209,8 +209,21 @@ namespace KaitoMajima
         private void SpawnRing(GameObject ringPrefab)
         {
             var ring = Instantiate(ringPrefab, CurrentTower.ringTowerTransform.position, ringPrefab.transform.rotation, CurrentTower.ringTowerTransform);
-            var ringScript = ring.GetComponent<RingDetection>();
+            RingAdjustments(ring);
+        }
 
+        private void RingAdjustments(GameObject ring)
+        {
+            var ringScript = ring.GetComponent<RingDetection>();
+            ringScript.timingOptions = timingOptions;
+            
+            var ringScaleScript = ring.GetComponent<RingScale>();
+            ringScaleScript.ringTimingOptions = timingOptions;
+            ringScaleScript.Activate();
+            
+            var ringFadeScript = ring.GetComponent<RingFade>();
+            ringFadeScript.ringTimingOptions = timingOptions;
+            ringFadeScript.Activate();
             CurrentTower.AddRing(ringScript);
         }
     }

@@ -19,13 +19,8 @@ namespace KaitoMajima
         [SerializeField]
         private TweenSettings tweenSettings = TweenSettings.Default;
 
-        [SerializeField]
-        private RingTimingOptions ringTimingOptions;
+        public RingTimingOptions ringTimingOptions;
 
-        private void Awake()
-        {
-            tweenSettings.duration = ringTimingOptions.EarlyGoodWindow;
-        }
         private void OnEnable()
         {
             if(playOnEnable == PlayOnEnableTween.Activate)
@@ -35,11 +30,13 @@ namespace KaitoMajima
         }
         public override void Activate()
         {
+            tweenSettings.duration = ringTimingOptions.EarlyGoodWindow;
             spriteRenderer.DOFade(1, tweenSettings.duration).SetEase(tweenSettings.easeType);
         }
 
         public override void Deactivate()
         {
+            tweenSettings.duration = ringTimingOptions.EarlyGoodWindow;
             spriteRenderer.DOFade(0, tweenSettings.duration).SetEase(tweenSettings.easeType).OnComplete(DestroyOnEnd);
         }
 

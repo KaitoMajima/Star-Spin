@@ -618,7 +618,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scaledTransform: {fileID: 2150454324391015571}
-  playOnEnable: 1
+  playOnEnable: 0
   ringTimingOptions: {fileID: 11400000, guid: c83ceef2924d54744a51e635c2accc1f, type: 2}
   tweenSettings:
     duration: 1.8
@@ -645,7 +645,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 3984295822608150949}
-  playOnEnable: 1
+  playOnEnable: 0
   destroyOnEndDeactivate: 0
   tweenSettings:
     duration: 1

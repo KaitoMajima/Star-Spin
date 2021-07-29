@@ -13,8 +13,7 @@ namespace KaitoMajima
         [SerializeField]
         private PlayOnEnableTween playOnEnable = PlayOnEnableTween.None;
 
-        [SerializeField]
-        private RingTimingOptions ringTimingOptions;
+        public RingTimingOptions ringTimingOptions;
 
         [SerializeField]
         private TweenSettings tweenSettings = TweenSettings.Default;
@@ -28,18 +27,11 @@ namespace KaitoMajima
         
         private void Awake()
         {
-            tweenSettings.duration = ringTimingOptions.NoteLength;
+            
         }
-        private void Start()
-        {
-            Vector3 firstOriginalScale = scaledTransform.localScale;
-            originalScale = scaledTransform.localScale;
-            // originalScale = firstOriginalScale * ringTimingOptions.NoteLength / ringTimingOptions.noteDisappearTime;
-            // scaledTransform.localScale = originalScale;
-        }
+
         private void OnEnable()
         {
-            
             if(playOnEnable == PlayOnEnableTween.Activate)
                 Activate();
             if(playOnEnable == PlayOnEnableTween.Deactivate)
@@ -47,6 +39,10 @@ namespace KaitoMajima
         }
         public override void Activate()
         {
+            originalScale = ringTimingOptions.noteSize;
+            scaledTransform.localScale = originalScale;
+
+            tweenSettings.duration = ringTimingOptions.NoteLength;
 
             if(!tweenSettings.useLoops)
             {
@@ -72,6 +68,8 @@ namespace KaitoMajima
 
         public override void Deactivate()
         {
+            tweenSettings.duration = ringTimingOptions.NoteLength;
+
             scaledTransform.DOKill();
             scaledTransform.DOScale(originalScale, tweenSettings.duration).SetEase(tweenSettings.easeType).OnComplete(DestroyOnEndDeactivate);
 

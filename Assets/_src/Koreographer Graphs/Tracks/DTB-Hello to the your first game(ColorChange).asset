@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1223223985, guid: aa81bbec85a3f423193272a7c6154986, type: 3}
+  m_Name: DTB-Hello to the your first game(ColorChange)
+  m_EditorClassIdentifier: 
+  mEventID: DTB-Hello to the your first game(ColorChange)
+  mEventList:
+  - mStartSample: 1075962
+    mEndSample: 1075962
+  - mStartSample: 2085722
+    mEndSample: 2085722
+  - mStartSample: 2581847
+    mEndSample: 2581847
+  - mStartSample: 3577989
+    mEndSample: 3577989
+  - mStartSample: 4574130
+    mEndSample: 4574130
+  - mStartSample: 5072200
+    mEndSample: 5072200
+  - mStartSample: 5570271
+    mEndSample: 5570271
+  _SerializedPayloadTypes: []
+  _AssetPayloads: []
+  _AssetPayloadIdxs: 
+  _ColorPayloads: []
+  _ColorPayloadIdxs: 
+  _CurvePayloads: []
+  _CurvePayloadIdxs: 
+  _FloatPayloads: []
+  _FloatPayloadIdxs: 
+  _GradientPayloads: []
+  _GradientPayloadIdxs: 
+  _IntPayloads: []
+  _IntPayloadIdxs: 
+  _SpectrumPayloads: []
+  _SpectrumPayloadIdxs: 
+  _TextPayloads: []
+  _TextPayloadIdxs: 

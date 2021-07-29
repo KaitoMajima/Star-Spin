@@ -30,7 +30,7 @@ namespace KaitoMajima
         }
         public RingMode ringMode = RingMode.Circle;
 
-        [SerializeField] private RingTimingOptions timingOptions;
+        public RingTimingOptions timingOptions;
 
         [Header("Ring Hit Feedbacks")]
         [SerializeField] private MMFeedbacks earlyHitFeedback;
