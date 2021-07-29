@@ -67,6 +67,8 @@ namespace KaitoMajima
             }
         }
         private Koreography playingKoreo;
+
+        private bool initiatedSong;
         [SerializeField] private List<KoreographyEvent> rawKoreographyEvents;
 
         private int koreographyEventIndex = 0;
@@ -93,6 +95,15 @@ namespace KaitoMajima
         {
             musicAudioSource = musicSourceDynamicReference.Value.GetComponent<AudioSource>();
             InitializeWave();
+            PauseController.onPauseTriggered += PauseMusic;
+        }
+
+        private void PauseMusic(bool state)
+        {
+            if(!state)
+                musicAudioSource.UnPause();
+            else
+                musicAudioSource.Pause();
         }
 
         private void InitializeWave()
@@ -117,8 +128,9 @@ namespace KaitoMajima
                 leadInTimeLeft -= Time.deltaTime;
             else
             {
-                if(!musicAudioSource.isPlaying)
+                if(!musicAudioSource.isPlaying && !initiatedSong)
                 {
+                    initiatedSong = true;
                     if(debugMode)
                     {
                         musicAudioSource.time = timeSkip;
@@ -222,6 +234,11 @@ namespace KaitoMajima
             ringFadeScript.ringTimingOptions = timingOptions;
             ringFadeScript.Activate();
             CurrentTower.AddRing(ringScript);
+        }
+
+        private void OnDestroy()
+        {
+            PauseController.onPauseTriggered -= PauseMusic;
         }
 
     }
