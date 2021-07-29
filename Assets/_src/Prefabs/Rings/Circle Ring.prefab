@@ -46,6 +46,8 @@ GameObject:
   - component: {fileID: 8236235225819633563}
   - component: {fileID: 1279904419954047869}
   - component: {fileID: 4029951915766420326}
+  - component: {fileID: 3294658743123409677}
+  - component: {fileID: 6713862806584384842}
   m_Layer: 0
   m_Name: MisfireFeedback
   m_TagString: Untagged
@@ -81,6 +83,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Feedbacks:
   - {fileID: 4029951915766420326}
+  - {fileID: 6713862806584384842}
   InitializationMode: 2
   SafeMode: 3
   Direction: 0
@@ -151,6 +154,75 @@ MonoBehaviour:
   VfxPositionOffset: {x: 0, y: -0.5, z: 0}
   VfxCreateObjectPool: 0
   VfxObjectPoolSize: 5
+--- !u!114 &3294658743123409677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2069875834357817282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5abff13ee65b9f64db093784a2a99749, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6713862806584384842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2069875834357817282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23a102c1a91e34644aa37f1e4f00c31a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Active: 1
+  Label: Events
+  Chance: 100
+  Timing:
+    TimescaleMode: 0
+    InitialDelay: 0
+    CooldownDuration: 0
+    NumberOfRepeats: 0
+    RepeatForever: 0
+    DelayBetweenRepeats: 1
+    MMFeedbacksDirectionCondition: 0
+    PlayDirection: 0
+    ConstantIntensity: 0
+    UseIntensityInterval: 0
+    IntensityIntervalMin: 0
+    IntensityIntervalMax: 0
+    Sequence: {fileID: 0}
+    TrackID: 0
+    Quantized: 0
+    TargetBPM: 120
+  DebugActive: 0
+  PlayEvents:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3294658743123409677}
+        m_TargetAssemblyTypeName: KaitoMajima.MistakeSender, Assembly-CSharp
+        m_MethodName: SendMistakeValue
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  StopEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  InitializationEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  ResetEvents:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &3229282192482127897
 GameObject:
   m_ObjectHideFlags: 0
@@ -194,6 +266,8 @@ GameObject:
   - component: {fileID: 5033903083174607887}
   - component: {fileID: 399927628598653952}
   - component: {fileID: 6648130135368398765}
+  - component: {fileID: 6898872671483119743}
+  - component: {fileID: 1794074931486693680}
   m_Layer: 0
   m_Name: MissFeedback
   m_TagString: Untagged
@@ -229,6 +303,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Feedbacks:
   - {fileID: 6648130135368398765}
+  - {fileID: 1794074931486693680}
   InitializationMode: 2
   SafeMode: 3
   Direction: 0
@@ -299,6 +374,75 @@ MonoBehaviour:
   VfxPositionOffset: {x: 0, y: -0.5, z: 0}
   VfxCreateObjectPool: 0
   VfxObjectPoolSize: 5
+--- !u!114 &6898872671483119743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3591447725761066043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5abff13ee65b9f64db093784a2a99749, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1794074931486693680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3591447725761066043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23a102c1a91e34644aa37f1e4f00c31a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Active: 1
+  Label: Events
+  Chance: 100
+  Timing:
+    TimescaleMode: 0
+    InitialDelay: 0
+    CooldownDuration: 0
+    NumberOfRepeats: 0
+    RepeatForever: 0
+    DelayBetweenRepeats: 1
+    MMFeedbacksDirectionCondition: 0
+    PlayDirection: 0
+    ConstantIntensity: 0
+    UseIntensityInterval: 0
+    IntensityIntervalMin: 0
+    IntensityIntervalMax: 0
+    Sequence: {fileID: 0}
+    TrackID: 0
+    Quantized: 0
+    TargetBPM: 120
+  DebugActive: 0
+  PlayEvents:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6898872671483119743}
+        m_TargetAssemblyTypeName: KaitoMajima.MistakeSender, Assembly-CSharp
+        m_MethodName: SendMistakeValue
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  StopEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  InitializationEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  ResetEvents:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &3922979722687998077
 GameObject:
   m_ObjectHideFlags: 0
@@ -632,6 +776,7 @@ GameObject:
   - component: {fileID: 5957249991117121124}
   - component: {fileID: 4087839319150906307}
   - component: {fileID: 2807669335314785881}
+  - component: {fileID: 1882981113066443093}
   m_Layer: 0
   m_Name: LateFeedback
   m_TagString: Untagged
@@ -733,7 +878,7 @@ MonoBehaviour:
   PlayEvents:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4087839319150906307}
+      - m_Target: {fileID: 7765094384597712440}
         m_TargetAssemblyTypeName: KaitoMajima.ScoreSender, Assembly-CSharp
         m_MethodName: SendScore
         m_Mode: 3
@@ -742,6 +887,18 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 300
           m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1882981113066443093}
+        m_TargetAssemblyTypeName: KaitoMajima.MistakeSender, Assembly-CSharp
+        m_MethodName: SendMistakeValue
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0.5
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -781,6 +938,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToSpawn: {fileID: 3348078247851350367, guid: 9cf69b23d70bcf94997575e9c6632a64, type: 3}
   spawnPoint: {fileID: 7554539070230022396}
+--- !u!114 &1882981113066443093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5613202555253820439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5abff13ee65b9f64db093784a2a99749, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6719908752935313020
 GameObject:
   m_ObjectHideFlags: 0
@@ -1031,6 +1200,7 @@ GameObject:
   - component: {fileID: 2284521289100690930}
   - component: {fileID: 7765094384597712440}
   - component: {fileID: 3696004441898183299}
+  - component: {fileID: 4549537917115990105}
   m_Layer: 0
   m_Name: EarlyFeedback
   m_TagString: Untagged
@@ -1144,6 +1314,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4549537917115990105}
+        m_TargetAssemblyTypeName: KaitoMajima.MistakeSender, Assembly-CSharp
+        m_MethodName: SendMistakeValue
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0.5
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   StopEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -1180,3 +1362,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToSpawn: {fileID: 3348078247851350367, guid: 9cf69b23d70bcf94997575e9c6632a64, type: 3}
   spawnPoint: {fileID: 1364252417519229555}
+--- !u!114 &4549537917115990105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8672855493981512659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5abff13ee65b9f64db093784a2a99749, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

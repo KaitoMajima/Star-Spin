@@ -107,6 +107,8 @@ namespace KaitoMajima
             KoreographyTrackBase rhythmTrack = playingKoreo.GetTrackByID(eventID);
 			rawKoreographyEvents = rhythmTrack.GetAllEvents();
 
+            
+            Score.onNoteAmountInitiated?.Invoke(rawKoreographyEvents.Count);
         }
 
         private void Update()
@@ -221,5 +223,6 @@ namespace KaitoMajima
             ringFadeScript.Activate();
             CurrentTower.AddRing(ringScript);
         }
+
     }
 }

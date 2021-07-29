@@ -2288,8 +2288,8 @@ GameObject:
   - component: {fileID: 1831830853610744822}
   - component: {fileID: 3532880543285921146}
   - component: {fileID: 639987806444798161}
-  - component: {fileID: 6024251984627152480}
   - component: {fileID: 7007828686097519585}
+  - component: {fileID: 6452738995346211290}
   m_Layer: 5
   m_Name: Score Bar
   m_TagString: Untagged
@@ -2696,20 +2696,6 @@ MonoBehaviour:
     NoiseShiftMin: {x: 0, y: 0, z: 0}
     NoiseShiftMax: {x: 0, y: 0, z: 0}
   DebugWiggleDuration: 2
---- !u!114 &6024251984627152480
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3205139542806120173}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1b6d7d53effa424dad85e64e648ff50, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreTextComponent: {fileID: 8799140452393288949}
-  percentageTextComponent: {fileID: 2180926491494712197}
 --- !u!114 &7007828686097519585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2723,6 +2709,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Channel: 1
+--- !u!114 &6452738995346211290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3205139542806120173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b6d7d53effa424dad85e64e648ff50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreTextComponent: {fileID: 8799140452393288949}
+  percentageTextComponent: {fileID: 2180926491494712197}
+  noteAmount: 1
 --- !u!1 &3259467645125078740
 GameObject:
   m_ObjectHideFlags: 0
