@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 453eee4bfc8d6314ab65aa919d829fd5, type: 3}
   m_Name: Exit This Earth's Atomosphere
   m_EditorClassIdentifier: 
-  backgroundVisibility: 3
+  backgroundVisibilityLevel: 3
   earlyGoodWindow: 1
   perfectWindow: 1.14
   lateWindow: 1.45

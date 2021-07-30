@@ -8,7 +8,7 @@ namespace KaitoMajima
 {
     public class ChartChanger : MonoBehaviour
     {
-        [SerializeField] private RingTimingOptions ringTimingOptions;
+        public RingTimingOptions ringTimingOptions;
         [SerializeField] private Slider slider;
 
         public enum ChartSettingType
@@ -19,7 +19,7 @@ namespace KaitoMajima
         [SerializeField] private ChartSettingType chartSettingType;
         [SerializeField] private TextMeshProUGUI valueTextComponent;
 
-        private void Awake()
+        public void Initialize()
         {
             if(chartSettingType == ChartSettingType.BGVisibility)
             {

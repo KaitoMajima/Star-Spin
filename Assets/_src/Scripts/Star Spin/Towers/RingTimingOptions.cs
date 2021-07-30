@@ -4,9 +4,8 @@ using UnityEngine;
 
 namespace KaitoMajima
 {
-    using UnityEngine;
     
-    [CreateAssetMenu(fileName = "RingTimingOptions", menuName = "Defend The Beat/Options/Ring Timing")]
+    [CreateAssetMenu(fileName = "RingTimingOptions", menuName = "Star Spin/Options/Ring Timing")]
     public class RingTimingOptions : ScriptableObject
     {
         [Range(0, 5)]

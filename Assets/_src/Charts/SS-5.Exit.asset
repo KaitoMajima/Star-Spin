@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 729a04270a1173a439d5ad8003d6dd83, type: 3}
+  m_Name: SS-5.Exit
+  m_EditorClassIdentifier: 
+  musicName: EXiT This Earth's Atomosphere
+  difficulty: 3 - Hard
+  ringTimingOptions: {fileID: 11400000, guid: 105589ffe53c83e4f811d51b402992f4, type: 2}
+  cycleSprite: {fileID: 21300000, guid: 0f75da57554bf1648abac6645c0530b6, type: 3}
+  musicCover: {fileID: 21300000, guid: 627b6fb62a6ec044388a65f21364e93e, type: 3}
+  mapName: Space Drive
+  mapCover: {fileID: 21300000, guid: faebd46c6cc4e7f48b08322a5421326d, type: 3}
+  musicClip: {fileID: 8300000, guid: 5bb107322381d5b488c57aca627b067c, type: 3}
+  musicPreviewTime: 56
+  sceneName: SS-5.Exit

@@ -7,7 +7,13 @@ namespace KaitoMajima
 {
     public class SceneLoader : MonoBehaviour
     {
+        public string sceneName;
         public void Load(string sceneName)
+        {
+            SceneManager.LoadScene(sceneName);
+        }
+
+        public void Load()
         {
             SceneManager.LoadScene(sceneName);
         }

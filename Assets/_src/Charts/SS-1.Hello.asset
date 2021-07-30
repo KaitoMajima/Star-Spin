@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 729a04270a1173a439d5ad8003d6dd83, type: 3}
+  m_Name: SS-1.Hello
+  m_EditorClassIdentifier: 
+  musicName: Hello to the your first video game
+  difficulty: 1 - Easy
+  ringTimingOptions: {fileID: 11400000, guid: c83ceef2924d54744a51e635c2accc1f, type: 2}
+  cycleSprite: {fileID: 21300000, guid: 9b7886c4caecddb40abf149cc45fbc11, type: 3}
+  musicCover: {fileID: 21300000, guid: c6a1775c45886424bb24931b7391f740, type: 3}
+  mapName: Retro Room
+  mapCover: {fileID: 21300000, guid: 1f14a9b2a8c306d47b7c78b0d9375670, type: 3}
+  musicClip: {fileID: 8300000, guid: b8537fbd2e1af4f42bebb38805d42ea3, type: 3}
+  musicPreviewTime: 80
+  sceneName: SS-1.Hello

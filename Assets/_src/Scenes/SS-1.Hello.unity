@@ -6604,31 +6604,6 @@ MonoBehaviour:
   limitLoudness: 20
   minSize: 0.4
   maxSize: 2.5
---- !u!1 &693214392 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 693214392, guid: f48512cad3259a544b30699ae6df35e7, type: 3}
-  m_PrefabInstance: {fileID: 2537407267891712002}
-  m_PrefabAsset: {fileID: 0}
---- !u!224 &693214393 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 693214393, guid: f48512cad3259a544b30699ae6df35e7, type: 3}
-  m_PrefabInstance: {fileID: 2537407267891712002}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &693214399
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 693214392}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29726ee38015e654d87a9fa8bbe42796, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  transformReference: {fileID: 11400000, guid: c8f2eae8e4a06584a8943e11c1e59ff9, type: 2}
-  initialTransformToSubscribe: {fileID: 693214393}
-  subscribeAtAwake: 1
 --- !u!1 &764730130
 GameObject:
   m_ObjectHideFlags: 0
@@ -25283,18 +25258,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 693214394, guid: f48512cad3259a544b30699ae6df35e7, type: 3}
-      propertyPath: playerInput
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 693214394, guid: f48512cad3259a544b30699ae6df35e7, type: 3}
-      propertyPath: dynamicPlayerInputReference
-      value: 
-      objectReference: {fileID: 11400000, guid: b0653924443e2c44e91f60621b529c3c, type: 2}
-    - target: {fileID: 2537407267078379862, guid: f48512cad3259a544b30699ae6df35e7, type: 3}
-      propertyPath: m_SceneBindings.Array.data[4].value
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 2537407267749340302, guid: f48512cad3259a544b30699ae6df35e7, type: 3}
       propertyPath: m_Name
       value: In-Game UI
@@ -25382,14 +25345,6 @@ PrefabInstance:
     - target: {fileID: 2537407267749340306, guid: f48512cad3259a544b30699ae6df35e7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2537407268248660092, guid: f48512cad3259a544b30699ae6df35e7, type: 3}
-      propertyPath: m_SceneBindings.Array.data[4].value
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2537407268248660092, guid: f48512cad3259a544b30699ae6df35e7, type: 3}
-      propertyPath: m_SceneBindings.Array.data[9].value
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f48512cad3259a544b30699ae6df35e7, type: 3}
