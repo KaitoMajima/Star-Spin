@@ -17,6 +17,9 @@ namespace KaitoMajima
 
         [SerializeField] private Image cycleImage;
 
+        [SerializeField] private Image playCycleImage;
+        [SerializeField] private Image playCycleMask;
+
         [SerializeField] private Image musicCoverImage;
 
         [SerializeField] private AudioSource musicSource;

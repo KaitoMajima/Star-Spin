@@ -15,7 +15,7 @@ MonoBehaviour:
   musicName: EXiT This Earth's Atomosphere
   difficulty: 3 - Hard
   ringTimingOptions: {fileID: 11400000, guid: 105589ffe53c83e4f811d51b402992f4, type: 2}
-  cycleSprite: {fileID: 21300000, guid: 0f75da57554bf1648abac6645c0530b6, type: 3}
+  cycleSprite: {fileID: -5007706786966634123, guid: c73d8eb8904e6fc40906b40b2fd57b55, type: 3}
   musicCover: {fileID: 21300000, guid: 627b6fb62a6ec044388a65f21364e93e, type: 3}
   mapName: Space Drive
   mapCover: {fileID: 21300000, guid: faebd46c6cc4e7f48b08322a5421326d, type: 3}
