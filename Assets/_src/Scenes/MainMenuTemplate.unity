@@ -10983,23 +10983,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1543248441 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4281630494038905624, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
-  m_PrefabInstance: {fileID: 4281630494438879203}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1543248442
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1543248441}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72ad3ee538214bc44b328b2f95b4eb55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1575786061
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11838,18 +11821,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2282160763264073186, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 2282160763264073186, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
     - target: {fileID: 4281630493385607237, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
       propertyPath: m_Name
       value: MAIN MENU UI
       objectReference: {fileID: 0}
-    - target: {fileID: 4281630493385607240, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 494299303}
-    - target: {fileID: 4281630493385607240, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
-      propertyPath: m_UIInputModule
-      value: 
-      objectReference: {fileID: 1404926501}
     - target: {fileID: 4281630493385607241, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -11934,10 +11913,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4281630493418267607, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
-      propertyPath: m_Events.m_Events.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Sector TEST 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4281630493591819318, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
       propertyPath: serializationData.Prefab
       value: 
@@ -11946,38 +11921,6 @@ PrefabInstance:
       propertyPath: serializationData.Prefab
       value: 
       objectReference: {fileID: 4281630493816888525, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
-    - target: {fileID: 4281630494038905630, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4281630494038905630, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4281630494038905630, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1543248442}
-    - target: {fileID: 4281630494038905630, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4281630494038905630, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Quit
-      objectReference: {fileID: 0}
-    - target: {fileID: 4281630494038905630, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: KaitoMajima.SceneLoader, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4281630494038905630, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4281630494370146169, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
-      propertyPath: m_text
-      value: STAR SPIN
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
 --- !u!4 &4423787258704567196 stripped
