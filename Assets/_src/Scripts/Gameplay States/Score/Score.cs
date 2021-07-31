@@ -8,20 +8,28 @@ namespace KaitoMajima
 {
     public class Score : MonoBehaviour
     {
+        public HealthState healthState;
+
+        [SerializeField] private float regenerationStep = 2.5f;
+        [SerializeField] private int healthRegenerated = 1;
         [SerializeField] private TextMeshProUGUI scoreTextComponent;
         [SerializeField] private TextMeshProUGUI percentageTextComponent;
 
         public static Action<int> onScoreUpdated;
         public static Action<int> onNoteAmountInitiated;
 
+        public static Action onRegenerate;
+
         public static Action<float> onNoteFail;
 
         public int noteAmount = 1;
 
         private float noteHitRate = 1;
+        private bool lost;
 
         private ScoreSet score = new ScoreSet();
 
+        private float currentUpdateTime = 0;
         private void Awake()
         {
             UpdateScore(0);
@@ -31,6 +39,20 @@ namespace KaitoMajima
             onNoteFail += FailNote;
         }
 
+        private void Update()
+        {
+            if(lost)
+                return;
+            currentUpdateTime += Time.deltaTime;
+            if(currentUpdateTime >= regenerationStep)
+            {
+                if(healthState.Health >= healthState.MaxHealth)
+                    return;
+                currentUpdateTime = 0;
+                Health.Heal(ref healthState, healthRegenerated);
+                onRegenerate?.Invoke();
+            }
+        }
         
         private void UpdateScore(int noteValue)
         {
@@ -48,9 +70,28 @@ namespace KaitoMajima
 
         private void FailNote(float amount)
         {
+            if(lost)
+                return;
+            
+            if(amount >= 1)
+            {
+                if(healthState.Health > 0)
+                    healthState.Health -= (int)amount;
+                if(healthState.Health <= 0)
+                    Lose();
+            }
+
+            currentUpdateTime = 0;
             noteHitRate -= amount;
             score.percentage = noteHitRate / noteAmount * 100;
             percentageTextComponent.text = PercentageFormat(score.percentage);
+        }
+
+        private void Lose()
+        {
+            GameManager.OnGameOver?.Invoke();
+            lost = true;
+            print("lost");
         }
 
         private string PercentageFormat(float value)

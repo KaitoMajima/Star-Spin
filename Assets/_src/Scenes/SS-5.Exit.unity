@@ -27433,5 +27433,13 @@ PrefabInstance:
       propertyPath: m_SceneBindings.Array.data[9].value
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6452738995346211290, guid: f48512cad3259a544b30699ae6df35e7, type: 3}
+      propertyPath: healthState.Health
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452738995346211290, guid: f48512cad3259a544b30699ae6df35e7, type: 3}
+      propertyPath: healthState.MaxHealth
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f48512cad3259a544b30699ae6df35e7, type: 3}

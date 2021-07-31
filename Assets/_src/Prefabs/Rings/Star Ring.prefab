@@ -48,6 +48,7 @@ GameObject:
   - component: {fileID: 4029951915766420326}
   - component: {fileID: 1226793180397712197}
   - component: {fileID: 4981185486876446759}
+  - component: {fileID: 5815466094307538686}
   m_Layer: 0
   m_Name: MisfireFeedback
   m_TagString: Untagged
@@ -84,6 +85,7 @@ MonoBehaviour:
   Feedbacks:
   - {fileID: 4029951915766420326}
   - {fileID: 4981185486876446759}
+  - {fileID: 5815466094307538686}
   InitializationMode: 2
   SafeMode: 3
   Direction: 0
@@ -223,6 +225,48 @@ MonoBehaviour:
   ResetEvents:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5815466094307538686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2069875834357817282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8fe7e41857f44348b52714b3238715c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Active: 1
+  Label: Camera Shake
+  Chance: 100
+  Timing:
+    TimescaleMode: 0
+    InitialDelay: 0
+    CooldownDuration: 0
+    NumberOfRepeats: 0
+    RepeatForever: 0
+    DelayBetweenRepeats: 1
+    MMFeedbacksDirectionCondition: 0
+    PlayDirection: 0
+    ConstantIntensity: 0
+    UseIntensityInterval: 0
+    IntensityIntervalMin: 0
+    IntensityIntervalMax: 0
+    Sequence: {fileID: 0}
+    TrackID: 0
+    Quantized: 0
+    TargetBPM: 120
+  DebugActive: 0
+  RepeatUntilStopped: 0
+  Channel: 2
+  CameraShakeProperties:
+    Duration: 0.1
+    Amplitude: 3
+    Frequency: 25
+    AmplitudeX: 7
+    AmplitudeY: 20
+    AmplitudeZ: 0
 --- !u!1 &3229282192482127897
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,6 +312,7 @@ GameObject:
   - component: {fileID: 6648130135368398765}
   - component: {fileID: 1679793651113985945}
   - component: {fileID: 7420781825418563566}
+  - component: {fileID: 4924043639765313962}
   m_Layer: 0
   m_Name: MissFeedback
   m_TagString: Untagged
@@ -304,6 +349,7 @@ MonoBehaviour:
   Feedbacks:
   - {fileID: 6648130135368398765}
   - {fileID: 7420781825418563566}
+  - {fileID: 4924043639765313962}
   InitializationMode: 2
   SafeMode: 3
   Direction: 0
@@ -443,6 +489,48 @@ MonoBehaviour:
   ResetEvents:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4924043639765313962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3591447725761066043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8fe7e41857f44348b52714b3238715c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Active: 1
+  Label: Camera Shake
+  Chance: 100
+  Timing:
+    TimescaleMode: 0
+    InitialDelay: 0
+    CooldownDuration: 0
+    NumberOfRepeats: 0
+    RepeatForever: 0
+    DelayBetweenRepeats: 1
+    MMFeedbacksDirectionCondition: 0
+    PlayDirection: 0
+    ConstantIntensity: 0
+    UseIntensityInterval: 0
+    IntensityIntervalMin: 0
+    IntensityIntervalMax: 0
+    Sequence: {fileID: 0}
+    TrackID: 0
+    Quantized: 0
+    TargetBPM: 120
+  DebugActive: 0
+  RepeatUntilStopped: 0
+  Channel: 2
+  CameraShakeProperties:
+    Duration: 0.1
+    Amplitude: 3
+    Frequency: 25
+    AmplitudeX: 7
+    AmplitudeY: 20
+    AmplitudeZ: 0
 --- !u!1 &3922979722687998077
 GameObject:
   m_ObjectHideFlags: 0

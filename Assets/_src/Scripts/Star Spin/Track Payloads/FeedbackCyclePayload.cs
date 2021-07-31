@@ -21,7 +21,6 @@ namespace KaitoMajima
 
         private void TriggerActivation(KoreographyEvent koreoEvent)
         {
-            Debug.Log(cycleIndex);
             var payloadFeedback = payloadFeedbacks[cycleIndex];
             if(onOffMode)
             {

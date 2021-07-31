@@ -11184,8 +11184,8 @@ MonoBehaviour:
     loopType: 1
   tweenVectorSettings:
     resetValues: 1
-    startValue: {x: 0, y: 0.5}
-    endValue: {x: 0, y: 0.75}
+    startValue: {x: 0, y: 0.45}
+    endValue: {x: 0, y: 0.57}
 --- !u!1 &423211400
 GameObject:
   m_ObjectHideFlags: 0
@@ -13590,31 +13590,6 @@ MonoBehaviour:
   eventID: DTB-Exit This Earth's Atomosphere(SparklingStars)
   onOffMode: 1
   payloadFeedback: {fileID: 921176471}
---- !u!1 &693214392 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 693214392, guid: f48512cad3259a544b30699ae6df35e7, type: 3}
-  m_PrefabInstance: {fileID: 2537407267891712002}
-  m_PrefabAsset: {fileID: 0}
---- !u!224 &693214393 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 693214393, guid: f48512cad3259a544b30699ae6df35e7, type: 3}
-  m_PrefabInstance: {fileID: 2537407267891712002}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &693214399
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 693214392}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29726ee38015e654d87a9fa8bbe42796, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  transformReference: {fileID: 11400000, guid: c8f2eae8e4a06584a8943e11c1e59ff9, type: 2}
-  initialTransformToSubscribe: {fileID: 693214393}
-  subscribeAtAwake: 1
 --- !u!1 &743026532
 GameObject:
   m_ObjectHideFlags: 0
@@ -14101,7 +14076,7 @@ Transform:
   m_GameObject: {fileID: 826351814}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children:
   - {fileID: 1001809296}
   m_Father: {fileID: 796617093}
@@ -14163,7 +14138,7 @@ SpriteRenderer:
   m_SortingLayerID: -612454531
   m_SortingLayer: 1
   m_SortingOrder: 10
-  m_Sprite: {fileID: 2747690628134850419, guid: a9716c16a44a94eed9b5c90fbf4d9bdd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 47ded000a46c8db478c882a12e1c66ef, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.69803923}
   m_FlipX: 0
   m_FlipY: 0
@@ -34780,18 +34755,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 693214394, guid: f48512cad3259a544b30699ae6df35e7, type: 3}
-      propertyPath: playerInput
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 693214394, guid: f48512cad3259a544b30699ae6df35e7, type: 3}
-      propertyPath: dynamicPlayerInputReference
-      value: 
-      objectReference: {fileID: 11400000, guid: b0653924443e2c44e91f60621b529c3c, type: 2}
-    - target: {fileID: 2537407267078379862, guid: f48512cad3259a544b30699ae6df35e7, type: 3}
-      propertyPath: m_SceneBindings.Array.data[4].value
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 2537407267749340302, guid: f48512cad3259a544b30699ae6df35e7, type: 3}
       propertyPath: m_Name
       value: In-Game UI
@@ -34880,13 +34843,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2537407268248660092, guid: f48512cad3259a544b30699ae6df35e7, type: 3}
-      propertyPath: m_SceneBindings.Array.data[4].value
-      value: 
+    - target: {fileID: 6452738995346211290, guid: f48512cad3259a544b30699ae6df35e7, type: 3}
+      propertyPath: healthState.Health
+      value: 15
       objectReference: {fileID: 0}
-    - target: {fileID: 2537407268248660092, guid: f48512cad3259a544b30699ae6df35e7, type: 3}
-      propertyPath: m_SceneBindings.Array.data[9].value
-      value: 
+    - target: {fileID: 6452738995346211290, guid: f48512cad3259a544b30699ae6df35e7, type: 3}
+      propertyPath: healthState.MaxHealth
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f48512cad3259a544b30699ae6df35e7, type: 3}
