@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mSourceClip: {fileID: 8300000, guid: 7ca4104520500ee44ba58b08d4e43577, type: 3}
   mAudioFilePath: 
-  mSampleRate: -1
+  mSampleRate: 44100
   mIgnoreLatencyOffset: 0
   mTempoSections:
   - sectionName: 'Song  '
@@ -24,3 +24,4 @@ MonoBehaviour:
     bStartNewMeasure: 1
   mTracks:
   - {fileID: 11400000, guid: 191f0431e76593140879f9ee65d568ba, type: 2}
+  - {fileID: 11400000, guid: b3cba5e18b4bf554eb02492e81ea73c8, type: 2}
