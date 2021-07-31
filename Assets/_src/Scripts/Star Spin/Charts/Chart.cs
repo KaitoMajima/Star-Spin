@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 namespace KaitoMajima
 {
@@ -17,6 +18,13 @@ namespace KaitoMajima
         public AudioClip musicClip;
         public float musicPreviewTime;
         public string sceneName;
-
+        public ChartScore currentScore;
+        [Serializable]
+        public class ChartScore
+        {
+            public Sprite gradeSprite;
+            public int score;
+            public float percentage;
+        }
     }
 }

@@ -15,6 +15,20 @@ namespace KaitoMajima
         [SerializeField] private TextMeshProUGUI scoreTextComponent;
         [SerializeField] private TextMeshProUGUI percentageTextComponent;
 
+        [SerializeField] private Chart musicChart;
+
+        [SerializeField] private Sprite ZScore;
+
+        [SerializeField] private Sprite SS_Score;
+
+        [SerializeField] private Sprite S_Score;
+
+        [SerializeField] private Sprite AScore;
+
+        [SerializeField] private Sprite BScore;
+
+        [SerializeField] private Sprite CScore;
+
         public static Action<int> onScoreUpdated;
         public static Action<int> onNoteAmountInitiated;
 
@@ -37,6 +51,27 @@ namespace KaitoMajima
             onScoreUpdated += UpdateScore;
             onNoteAmountInitiated += SetNoteAmount;
             onNoteFail += FailNote;
+            TowersRhythmController.onLastNote += SubmitScore;
+        }
+
+        private void SubmitScore()
+        {
+            musicChart.currentScore.score = score.scoreValue;
+            musicChart.currentScore.percentage = score.percentage;
+
+            if(score.percentage == 100)
+                musicChart.currentScore.gradeSprite = ZScore;
+            else if(score.percentage > 99)
+                musicChart.currentScore.gradeSprite = SS_Score;
+            else if(score.percentage > 95)
+                musicChart.currentScore.gradeSprite = S_Score;
+            else if(score.percentage > 85)
+                musicChart.currentScore.gradeSprite = AScore;
+            else if(score.percentage > 70)
+                musicChart.currentScore.gradeSprite = BScore;
+            else
+                musicChart.currentScore.gradeSprite = CScore;
+
         }
 
         private void Update()
@@ -110,6 +145,7 @@ namespace KaitoMajima
             onScoreUpdated -= UpdateScore;
             onNoteAmountInitiated -= SetNoteAmount;
             onNoteFail -= FailNote;
+            TowersRhythmController.onLastNote -= SubmitScore;
         }
     }
 
@@ -117,6 +153,8 @@ namespace KaitoMajima
     {
         public int scoreValue = 0;
         public float percentage = 100;
+
+        
     }
     
 }

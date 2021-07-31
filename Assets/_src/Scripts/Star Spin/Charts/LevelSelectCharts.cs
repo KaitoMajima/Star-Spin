@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -23,6 +24,11 @@ namespace KaitoMajima
         [SerializeField] private Image musicCoverImage;
 
         [SerializeField] private AudioSource musicSource;
+
+        [SerializeField] private TextMeshProUGUI scoreTextComponent;
+        [SerializeField] private Image scoreImage;
+
+
         
         private int chartIndex = 0;
 
@@ -60,6 +66,19 @@ namespace KaitoMajima
 
             musicCoverImage.sprite = CurrentChart.musicCover;
             cycleImage.sprite = CurrentChart.cycleSprite;
+
+            if(CurrentChart.currentScore.gradeSprite != null)
+            {
+                scoreImage.enabled = true;
+                scoreImage.sprite = CurrentChart.currentScore.gradeSprite;
+                scoreTextComponent.text = String.Format("{0:D8}", CurrentChart.currentScore.score);
+            }
+            else
+            {
+                scoreImage.enabled = false;
+                scoreTextComponent.text = "";
+            }
+
 
             musicSource.Stop();
             musicSource.clip = CurrentChart.musicClip;

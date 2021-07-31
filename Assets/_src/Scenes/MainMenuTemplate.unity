@@ -5191,6 +5191,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &81517327 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 81517327, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+  m_PrefabInstance: {fileID: 4281630494438879203}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &116189996
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27577,6 +27588,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8948391486509803252, guid: 89b20f02c7a97af479719e145f5d11d5, type: 3}
   m_PrefabInstance: {fileID: 1248859652}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1262728092 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1262728092, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+  m_PrefabInstance: {fileID: 4281630494438879203}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1292112207
 GameObject:
   m_ObjectHideFlags: 3
@@ -28210,41 +28232,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1422742724 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4281630494370146171, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
-  m_PrefabInstance: {fileID: 4281630494438879203}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1422742729
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1422742724}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a611c712574246045bc5edc5bfc4fb5e, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &1452560249
 GameObject:
   m_ObjectHideFlags: 3
@@ -35449,9 +35436,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 51672868}
     - target: {fileID: 2011420662, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: scoreImage
+      value: 
+      objectReference: {fileID: 1262728092}
+    - target: {fileID: 2011420662, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
       propertyPath: musicSource
       value: 
       objectReference: {fileID: 51672868}
+    - target: {fileID: 2011420662, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: scoreTextComponent
+      value: 
+      objectReference: {fileID: 81517327}
     - target: {fileID: 1953748211942777096, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
       propertyPath: serializationData.Prefab
       value: 
@@ -35556,20 +35551,7 @@ PrefabInstance:
       propertyPath: serializationData.Prefab
       value: 
       objectReference: {fileID: 4281630493816888525, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
-    - target: {fileID: 4281630494370146170, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 1062.538
-      objectReference: {fileID: 0}
-    - target: {fileID: 4281630494370146170, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 193
-      objectReference: {fileID: 0}
-    - target: {fileID: 4281630494370146170, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 15
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4281630494370146169, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
 --- !u!4 &4423787258704567196 stripped
 Transform:

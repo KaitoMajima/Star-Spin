@@ -25,6 +25,8 @@ namespace KaitoMajima
         [SerializeField] private GameObject circleRingPrefab;
         [SerializeField] private GameObject squareRingPrefab;
         [SerializeField] private GameObject starRingPrefab;
+
+        public static Action onLastNote;
         [EventID] public string eventID;
         private float leadInTime;
         private float leadInTimeLeft;
@@ -130,6 +132,14 @@ namespace KaitoMajima
 
         private void Update()
         {
+            bool lastNote = koreographyEventIndex == rawKoreographyEvents.Count - 1;
+            if(lastNote)
+            {
+                onLastNote?.Invoke();
+                return;
+            }
+                
+
             if(leadInTimeLeft > 0)
                 leadInTimeLeft -= Time.deltaTime;
             else

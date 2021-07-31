@@ -6134,7 +6134,7 @@ MonoBehaviour:
   eventID: DTB-Exit This Earth's Atomosphere(Playable)
   timingOptions: {fileID: 11400000, guid: 105589ffe53c83e4f811d51b402992f4, type: 2}
   debugMode: 0
-  timeSkip: 100
+  timeSkip: 120
   rawKoreographyEvents: []
 --- !u!114 &418300909
 MonoBehaviour:
@@ -27437,6 +27437,10 @@ PrefabInstance:
       propertyPath: eventID
       value: DTB-Exit This Earth's Atomosphere(WinPoint)
       objectReference: {fileID: 0}
+    - target: {fileID: 6452738995346211290, guid: f48512cad3259a544b30699ae6df35e7, type: 3}
+      propertyPath: musicChart
+      value: 
+      objectReference: {fileID: 11400000, guid: 1fe26e6c766fba14a8f9b62e2340b3c6, type: 2}
     - target: {fileID: 6452738995346211290, guid: f48512cad3259a544b30699ae6df35e7, type: 3}
       propertyPath: healthState.Health
       value: 20

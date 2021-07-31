@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mEventID: DTB-Exit This Earth's Atomosphere(WinPoint)
   mEventList:
+  - mStartSample: 6597542
+    mEndSample: 6597542
   - mStartSample: 14551106
     mEndSample: 14551106
   _SerializedPayloadTypes: []

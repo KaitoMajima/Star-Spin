@@ -3651,6 +3651,13 @@ MonoBehaviour:
   healthRegenerated: 1
   scoreTextComponent: {fileID: 8799140452393288949}
   percentageTextComponent: {fileID: 2180926491494712197}
+  musicChart: {fileID: 11400000, guid: aac04f1e4fbb88940a20d705a30da427, type: 2}
+  ZScore: {fileID: 5054921814899893579, guid: 5760979ec8e7f2d49946377839a8ca39, type: 3}
+  SS_Score: {fileID: 6235554461200445302, guid: 5760979ec8e7f2d49946377839a8ca39, type: 3}
+  S_Score: {fileID: 693587235302899014, guid: 5760979ec8e7f2d49946377839a8ca39, type: 3}
+  AScore: {fileID: 8314921527088637396, guid: 5760979ec8e7f2d49946377839a8ca39, type: 3}
+  BScore: {fileID: 8314921527088637396, guid: 5760979ec8e7f2d49946377839a8ca39, type: 3}
+  CScore: {fileID: 8095527835888432873, guid: 5760979ec8e7f2d49946377839a8ca39, type: 3}
   noteAmount: 1
 --- !u!1 &3259467645125078740
 GameObject:

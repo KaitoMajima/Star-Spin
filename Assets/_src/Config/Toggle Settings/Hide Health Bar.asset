@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e71901e9f118777429f75205c719547a, type: 3}
   m_Name: Hide Health Bar
   m_EditorClassIdentifier: 
-  setting: 0
+  setting: 1
