@@ -35505,13 +35505,6 @@ PrefabInstance:
       propertyPath: serializationData.Prefab
       value: 
       objectReference: {fileID: 4281630493816888525, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
-    - target: {fileID: 4281630494552532514, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
-      propertyPath: m_text
-      value: 'All music produced by <color=#FF8F94><b>Camellia</color></b>
-
-        Menu
-        song: Crystallized by <color=#FF8F94><b>Camellia</color></b>'
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
 --- !u!4 &4423787258704567196 stripped
