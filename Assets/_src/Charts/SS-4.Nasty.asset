@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 729a04270a1173a439d5ad8003d6dd83, type: 3}
+  m_Name: SS-4.Nasty
+  m_EditorClassIdentifier: 
+  musicName: Nasty * Nasty * Spell
+  difficulty: 2 - Medium
+  ringTimingOptions: {fileID: 11400000, guid: efc7fb7ded076854fac0a80a123f8cbc, type: 2}
+  cycleSprite: {fileID: 8393701397780413116, guid: c73d8eb8904e6fc40906b40b2fd57b55, type: 3}
+  musicCover: {fileID: 21300000, guid: ffa559c686587634d8a095c036dd66f2, type: 3}
+  mapName: Scarlet Dreams
+  mapCover: {fileID: 21300000, guid: faebd46c6cc4e7f48b08322a5421326d, type: 3}
+  musicClip: {fileID: 8300000, guid: be60a6db9ad3d694aa79f3c732d98e7f, type: 3}
+  musicPreviewTime: 56
+  sceneName: SS-5.Exit

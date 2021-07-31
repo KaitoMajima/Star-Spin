@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/_src/Scenes/SS-1.Hello.unity
     guid: 4654398112c6af842a685fffd3d943ac
   - enabled: 1
+    path: Assets/_src/Scenes/SS-2.Looking.unity
+    guid: d3ed9fa24f1039b4c9c44597de964d75
+  - enabled: 1
     path: Assets/_src/Scenes/SS-5.Exit.unity
     guid: 79cb9550bf81c7e49a0111b7dd6ae0ea
   m_configObjects:

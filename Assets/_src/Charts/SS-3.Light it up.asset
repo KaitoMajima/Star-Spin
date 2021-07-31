@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 729a04270a1173a439d5ad8003d6dd83, type: 3}
+  m_Name: SS-3.Light it up
+  m_EditorClassIdentifier: 
+  musicName: Light it up
+  difficulty: 2 - Medium
+  ringTimingOptions: {fileID: 11400000, guid: 95bdd95f941e4e644bcf10764f943698, type: 2}
+  cycleSprite: {fileID: -3218930250403883569, guid: c73d8eb8904e6fc40906b40b2fd57b55, type: 3}
+  musicCover: {fileID: 21300000, guid: 0b1d72c2649ece04f944455b77d245d5, type: 3}
+  mapName: Blossom Park
+  mapCover: {fileID: 21300000, guid: faebd46c6cc4e7f48b08322a5421326d, type: 3}
+  musicClip: {fileID: 8300000, guid: 7e4ba0e686886d648962eb00a3c88bec, type: 3}
+  musicPreviewTime: 77
+  sceneName: SS-5.Exit

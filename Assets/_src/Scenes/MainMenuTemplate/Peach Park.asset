@@ -46,7 +46,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   mode:
     m_OverrideState: 1
-    m_Value: 2
+    m_Value: 1
 --- !u!114 &-2624787725447656875
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -59,10 +59,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81180773991d8724ab7f2d216912b564, type: 3}
   m_Name: ChromaticAberration
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   m_AdvancedMode: 0
   intensity:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0
     min: 0
     max: 1
@@ -82,7 +82,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   postExposure:
     m_OverrideState: 1
-    m_Value: 0.2
+    m_Value: 0.52
   contrast:
     m_OverrideState: 1
     m_Value: 20
@@ -95,8 +95,8 @@ MonoBehaviour:
     showAlpha: 0
     showEyeDropper: 1
   hueShift:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: 12
     min: -180
     max: 180
   saturation:
@@ -114,7 +114,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7fd9488000d3734a9e00ee676215985, type: 3}
-  m_Name: ETAA
+  m_Name: Peach Park
   m_EditorClassIdentifier: 
   components:
   - {fileID: 1563731875107064694}
@@ -140,15 +140,15 @@ MonoBehaviour:
   m_AdvancedMode: 0
   threshold:
     m_OverrideState: 1
-    m_Value: 0.65
+    m_Value: 0.2
     min: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 3
+    m_Value: 0.64
     min: 0
   scatter:
     m_OverrideState: 0
-    m_Value: 0
+    m_Value: 0.676
     min: 0
     max: 1
   clamp:
@@ -157,7 +157,7 @@ MonoBehaviour:
     min: 0
   tint:
     m_OverrideState: 0
-    m_Value: {r: 0.030184316, g: 0.013152941, b: 0.043, a: 1}
+    m_Value: {r: 0.0056666667, g: 0.007166667, b: 0.0139999995, a: 1}
     hdr: 0
     showAlpha: 0
     showEyeDropper: 1
@@ -201,12 +201,12 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.25
+    m_Value: 0.177
     min: 0
     max: 1
   smoothness:
     m_OverrideState: 1
-    m_Value: 0.778
+    m_Value: 0.749
     min: 0.01
     max: 1
   rounded:
@@ -228,7 +228,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   distance:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0.739
     min: 0
     max: 1
   cropToFit:

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 729a04270a1173a439d5ad8003d6dd83, type: 3}
+  m_Name: SS-2.Looking for edge of ground
+  m_EditorClassIdentifier: 
+  musicName: Looking for edge of ground
+  difficulty: 2 - Medium
+  ringTimingOptions: {fileID: 11400000, guid: 18e49610863d5ae4a98dd203aef279a1, type: 2}
+  cycleSprite: {fileID: 9183597043195739177, guid: c73d8eb8904e6fc40906b40b2fd57b55, type: 3}
+  musicCover: {fileID: 21300000, guid: f5bf2dc177f4fee44b7b0f56ca997064, type: 3}
+  mapName: Peach Park
+  mapCover: {fileID: 21300000, guid: bb14757d34a145a43b18921ebf777f73, type: 3}
+  musicClip: {fileID: 8300000, guid: 7ca4104520500ee44ba58b08d4e43577, type: 3}
+  musicPreviewTime: 62
+  sceneName: SS-2.Looking
