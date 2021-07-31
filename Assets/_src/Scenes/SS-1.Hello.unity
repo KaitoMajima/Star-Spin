@@ -5728,8 +5728,8 @@ MonoBehaviour:
   starRingPrefab: {fileID: 3922979722687998077, guid: 4d19379211d5c8142b5e89262b063b4a, type: 3}
   eventID: DTB-Hello To The Your First Game(Playable)
   timingOptions: {fileID: 11400000, guid: c83ceef2924d54744a51e635c2accc1f, type: 2}
-  debugMode: 0
-  timeSkip: 80
+  debugMode: 1
+  timeSkip: 260
   rawKoreographyEvents: []
 --- !u!114 &418300909
 MonoBehaviour:
@@ -25345,6 +25345,10 @@ PrefabInstance:
     - target: {fileID: 2537407267749340306, guid: f48512cad3259a544b30699ae6df35e7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196671686358164286, guid: f48512cad3259a544b30699ae6df35e7, type: 3}
+      propertyPath: eventID
+      value: DTB-Hello to the your first game(WinPoint)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f48512cad3259a544b30699ae6df35e7, type: 3}

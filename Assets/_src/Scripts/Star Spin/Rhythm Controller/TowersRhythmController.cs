@@ -96,6 +96,7 @@ namespace KaitoMajima
             musicAudioSource = musicSourceDynamicReference.Value.GetComponent<AudioSource>();
             InitializeWave();
             PauseController.onPauseTriggered += PauseMusic;
+            GameManager.OnGameOver += StopMusic;
         }
 
         private void PauseMusic(bool state)
@@ -104,6 +105,11 @@ namespace KaitoMajima
                 musicAudioSource.UnPause();
             else
                 musicAudioSource.Pause();
+        }
+
+        private void StopMusic()
+        {
+            musicAudioSource.Stop();
         }
 
         private void InitializeWave()
@@ -239,6 +245,7 @@ namespace KaitoMajima
         private void OnDestroy()
         {
             PauseController.onPauseTriggered -= PauseMusic;
+            GameManager.OnGameOver -= StopMusic;
         }
 
     }

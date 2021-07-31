@@ -27433,6 +27433,10 @@ PrefabInstance:
       propertyPath: m_SceneBindings.Array.data[9].value
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3196671686358164286, guid: f48512cad3259a544b30699ae6df35e7, type: 3}
+      propertyPath: eventID
+      value: DTB-Exit This Earth's Atomosphere(WinPoint)
+      objectReference: {fileID: 0}
     - target: {fileID: 6452738995346211290, guid: f48512cad3259a544b30699ae6df35e7, type: 3}
       propertyPath: healthState.Health
       value: 20
