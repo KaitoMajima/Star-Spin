@@ -58,7 +58,6 @@ namespace KaitoMajima
             if(musicChart.currentScore.gradeSprite != null)
             {
                 int previousScore = musicChart.currentScore.score;
-                Debug.Log(previousScore);
                 if(previousScore > score.scoreValue)
                     return;
 

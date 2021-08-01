@@ -23,6 +23,7 @@ namespace KaitoMajima
         public class ChartScore
         {
             public Sprite gradeSprite;
+            public bool newPersonalBest;
             public int score;
             public float percentage;
         }

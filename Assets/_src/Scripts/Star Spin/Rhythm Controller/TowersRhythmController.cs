@@ -31,6 +31,8 @@ namespace KaitoMajima
         private float leadInTime;
         private float leadInTimeLeft;
 
+        [SerializeField] private ValueSetting calibrationRate;
+
         [SerializeField] private RingTimingOptions timingOptions;
 
         [Header("Debug Mode")]
@@ -120,7 +122,7 @@ namespace KaitoMajima
         {
             currentTowerIndex = 0;
 
-            leadInTime = timingOptions.PerfectWindow;
+            leadInTime = timingOptions.PerfectWindow - calibrationRate.setting;
             leadInTimeLeft = leadInTime;
 
             playingKoreo = Koreographer.Instance.GetKoreographyAtIndex(0);

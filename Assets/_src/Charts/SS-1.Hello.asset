@@ -22,3 +22,8 @@ MonoBehaviour:
   musicClip: {fileID: 8300000, guid: b8537fbd2e1af4f42bebb38805d42ea3, type: 3}
   musicPreviewTime: 80
   sceneName: SS-1.Hello
+  currentScore:
+    gradeSprite: {fileID: 0}
+    newPersonalBest: 0
+    score: 0
+    percentage: 100

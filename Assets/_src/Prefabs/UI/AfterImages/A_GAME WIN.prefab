@@ -68,7 +68,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: GAME WIN!
+  m_text: YOU ROCK!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 213265d4af069004fb6c22e3ad25862e, type: 2}
   m_sharedMaterial: {fileID: -2298006050738467140, guid: 213265d4af069004fb6c22e3ad25862e, type: 2}
@@ -155,12 +155,14 @@ MonoBehaviour:
     duration: 0.85
     easeType: 27
     useLoops: 0
+    ignoreTimeScale: 0
     loopType: 0
   tweenScaleValueSettings:
     resetValues: 0
     scaleType: 1
     rateScale: 2
     fixedScale: {x: 1.5, y: 1.5}
+  destroyOnEndDeactivate: 0
 --- !u!114 &8819585217221378620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,10 +178,12 @@ MonoBehaviour:
   canvasGroup: {fileID: 8819585217221378621}
   playOnEnable: 2
   destroyOnEndDeactivate: 0
+  resetFade: 0
   tweenSettings:
     duration: 1
     easeType: 6
     useLoops: 0
+    ignoreTimeScale: 0
     loopType: 0
 --- !u!225 &8819585217221378621
 CanvasGroup:

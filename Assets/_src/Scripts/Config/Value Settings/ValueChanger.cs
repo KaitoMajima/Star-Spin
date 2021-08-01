@@ -21,10 +21,11 @@ namespace KaitoMajima
             slider.onValueChanged.AddListener(Change);
         }
         public void Change(float value)
-        {
-            settingToChange.ChangeSetting(value);
+        {  
+            settingToChange.ChangeSetting(slider.value);
+            slider.value = Mathf.Round(value * 10) / 10;
         }
-
+        
         private void OnDestroy()
         {
             slider.onValueChanged.RemoveListener(Change);

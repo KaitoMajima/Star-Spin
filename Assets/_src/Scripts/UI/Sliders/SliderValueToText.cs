@@ -18,7 +18,8 @@ namespace KaitoMajima
 
         private void ChangeTextValue(float value)
         {
-            textComponent.text = value.ToString();
+            slider.value = Mathf.Round(value * 10) / 10;
+            textComponent.text = slider.value.ToString();
         }
 
         private void OnDestroy()

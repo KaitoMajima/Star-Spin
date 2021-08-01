@@ -14,6 +14,7 @@ namespace KaitoMajima
         {
             slider.value += step;
             slider.value = Mathf.Clamp(slider.value, slider.minValue, slider.maxValue);
+            slider.value = Mathf.Round(slider.value * 10) / 10;
         }
     }
 }
