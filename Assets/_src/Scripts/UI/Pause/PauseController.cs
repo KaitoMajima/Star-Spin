@@ -57,6 +57,7 @@ namespace KaitoMajima
             if(!canPause)
                 return;
             pauseActivated = !pauseActivated;
+            onPauseTriggered?.Invoke(pauseActivated);
             pauseMenu.SetActive(pauseActivated);
 
             if(pauseActivated)

@@ -26,6 +26,8 @@ namespace KaitoMajima
         [SerializeField] private AudioSource musicSource;
 
         [SerializeField] private TextMeshProUGUI scoreTextComponent;
+
+        [SerializeField] private TextMeshProUGUI percentageTextComponent;
         [SerializeField] private Image scoreImage;
 
 
@@ -72,11 +74,13 @@ namespace KaitoMajima
                 scoreImage.enabled = true;
                 scoreImage.sprite = CurrentChart.currentScore.gradeSprite;
                 scoreTextComponent.text = String.Format("{0:D8}", CurrentChart.currentScore.score);
+                percentageTextComponent.text = PercentageFormat(CurrentChart.currentScore.percentage);
             }
             else
             {
                 scoreImage.enabled = false;
-                scoreTextComponent.text = "";
+                scoreTextComponent.text = String.Empty;
+                percentageTextComponent.text = String.Empty;
             }
 
 
@@ -84,6 +88,16 @@ namespace KaitoMajima
             musicSource.clip = CurrentChart.musicClip;
             musicSource.time = CurrentChart.musicPreviewTime;
             musicSource.Play();
+        }
+
+        private string PercentageFormat(float value)
+        {
+            string text = String.Format("{0:0.00}", value);
+
+            if(text.EndsWith("00"))
+                return ((int)value).ToString() + "%";
+            
+            return text + "%";
         }
     }
 }

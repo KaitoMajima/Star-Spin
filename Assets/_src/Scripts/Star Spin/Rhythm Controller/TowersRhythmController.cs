@@ -70,6 +70,8 @@ namespace KaitoMajima
         }
         private Koreography playingKoreo;
 
+        private bool endedSong;
+
         private bool initiatedSong;
         [SerializeField] private List<KoreographyEvent> rawKoreographyEvents;
 
@@ -132,14 +134,6 @@ namespace KaitoMajima
 
         private void Update()
         {
-            bool lastNote = koreographyEventIndex == rawKoreographyEvents.Count - 1;
-            if(lastNote)
-            {
-                onLastNote?.Invoke();
-                return;
-            }
-                
-
             if(leadInTimeLeft > 0)
                 leadInTimeLeft -= Time.deltaTime;
             else
@@ -168,7 +162,15 @@ namespace KaitoMajima
                 
             }
             if(koreographyEventIndex >= rawKoreographyEvents.Count)
+            {
+                if(!endedSong)
+                {
+                    onLastNote?.Invoke();
+                    endedSong = true;
+                }
                 return;
+            }
+                
             if(DelayedSampleTime >= CurrentKoreographyEvent.StartSample - Delay)
             {
                 TriggerNote(CurrentKoreographyEvent);

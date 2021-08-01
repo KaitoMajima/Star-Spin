@@ -25346,6 +25346,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3196671686358164286, guid: f48512cad3259a544b30699ae6df35e7, type: 3}
+      propertyPath: eventID
+      value: DTB-Hello to the your first game(WinPoint)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452738995346211290, guid: f48512cad3259a544b30699ae6df35e7, type: 3}
+      propertyPath: musicChart
+      value: 
+      objectReference: {fileID: 11400000, guid: aac04f1e4fbb88940a20d705a30da427, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f48512cad3259a544b30699ae6df35e7, type: 3}
 --- !u!1001 &4569405441529064608
