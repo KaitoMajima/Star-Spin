@@ -152,7 +152,9 @@ namespace KaitoMajima
                         {
                             if(rawEvent.StartSample < sampleSkip)
                             {
-                                koreographyEventIndex++;
+                                if(koreographyEventIndex < rawKoreographyEvents.Count)
+                                    koreographyEventIndex++;
+                                
                                 continue;
                             }
                         } 
@@ -163,21 +165,14 @@ namespace KaitoMajima
                 
                 
             }
-            if(koreographyEventIndex >= rawKoreographyEvents.Count)
-            {
-                if(!endedSong)
-                {
-                    onLastNote?.Invoke();
-                    endedSong = true;
-                }
+            if(koreographyEventIndex == rawKoreographyEvents.Count)
                 return;
-            }
                 
             if(DelayedSampleTime >= CurrentKoreographyEvent.StartSample - Delay)
             {
                 TriggerNote(CurrentKoreographyEvent);
                 koreographyEventIndex++;
-                
+
             }
         }
         private void TriggerNote(KoreographyEvent koreoEvent)
@@ -219,6 +214,7 @@ namespace KaitoMajima
                     SpawnRing(starRingPrefab);
                     break;
             }
+
         }
 
         private void AdvanceTower()

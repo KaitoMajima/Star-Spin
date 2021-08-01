@@ -26,4 +26,9 @@ MonoBehaviour:
     gradeSprite: {fileID: 0}
     newPersonalBest: 0
     score: 0
-    percentage: 100
+    percentage: 0
+    perfectNotes: 0
+    earlyNotes: 0
+    lateNotes: 0
+    misfiredNotes: 0
+    missedNotes: 0

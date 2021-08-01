@@ -46,7 +46,7 @@ namespace KaitoMajima
             Miss = 4
         }
         public int noteAmount = 1;
-
+        [SerializeField] private int notesPassed;
         private float noteHitRate = 1;
         private bool lost;
 
@@ -61,7 +61,6 @@ namespace KaitoMajima
             onNoteRegister += RegisterScore;
             onNoteAmountInitiated += SetNoteAmount;
             onNoteFail += FailNote;
-            TowersRhythmController.onLastNote += SubmitScore;
         }
 
         private void RegisterScore(int note)
@@ -86,6 +85,8 @@ namespace KaitoMajima
                     break;
                
             }
+            if(notesPassed == noteAmount)
+                SubmitScore();
         }
 
         private void SubmitScore()
@@ -125,6 +126,8 @@ namespace KaitoMajima
             }
             score.newPersonalBest = true;
 
+            musicChart.currentScore = new Chart.ChartScore();
+
             musicChart.currentScore.score = score.scoreValue;
             musicChart.currentScore.percentage = score.percentage;
 
@@ -144,6 +147,7 @@ namespace KaitoMajima
         }
         private void UpdateScore(int noteValue)
         {
+            notesPassed++;
             score.scoreValue += noteValue;
             score.percentage = noteHitRate / noteAmount * 100;
             scoreTextComponent.text = String.Format("{0:D8}", score.scoreValue);
@@ -169,6 +173,7 @@ namespace KaitoMajima
             
             if(amount >= 1)
             {
+                notesPassed++;
                 if(healthState.Health > 0)
                     healthState.Health -= (int)amount;
                 if(healthState.Health <= 0)
@@ -203,11 +208,12 @@ namespace KaitoMajima
         {
             onScoreUpdated -= UpdateScore;
             onNoteAmountInitiated -= SetNoteAmount;
+            onNoteRegister -= RegisterScore;
             onNoteFail -= FailNote;
-            TowersRhythmController.onLastNote -= SubmitScore;
         }
     }
 
+    [Serializable]
     public class ScoreSet
     {
         public int scoreValue = 0;

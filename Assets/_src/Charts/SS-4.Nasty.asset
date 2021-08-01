@@ -22,3 +22,13 @@ MonoBehaviour:
   musicClip: {fileID: 8300000, guid: be60a6db9ad3d694aa79f3c732d98e7f, type: 3}
   musicPreviewTime: 56
   sceneName: SS-5.Exit
+  currentScore:
+    gradeSprite: {fileID: 0}
+    newPersonalBest: 0
+    score: 0
+    percentage: 0
+    perfectNotes: 0
+    earlyNotes: 0
+    lateNotes: 0
+    misfiredNotes: 0
+    missedNotes: 0

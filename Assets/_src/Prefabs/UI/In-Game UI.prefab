@@ -4201,7 +4201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb1b76c1aea905f478b12dc13f3185fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventID: DTB-Looking for edge of Ground(WinPoint)
+  eventID: DTB-Hello to the your first game(WinPoint)
 --- !u!114 &8849877956698590499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5291,7 +5291,7 @@ MonoBehaviour:
   healthRegenerated: 2
   scoreTextComponent: {fileID: 8799140452393288949}
   percentageTextComponent: {fileID: 2180926491494712197}
-  musicChart: {fileID: 11400000, guid: 012a3f5383c0b2d4a88b4967ec826332, type: 2}
+  musicChart: {fileID: 11400000, guid: aac04f1e4fbb88940a20d705a30da427, type: 2}
   ZScore: {fileID: 5054921814899893579, guid: 5760979ec8e7f2d49946377839a8ca39, type: 3}
   SS_Score: {fileID: 6235554461200445302, guid: 5760979ec8e7f2d49946377839a8ca39, type: 3}
   S_Score: {fileID: 693587235302899014, guid: 5760979ec8e7f2d49946377839a8ca39, type: 3}
@@ -5299,6 +5299,17 @@ MonoBehaviour:
   BScore: {fileID: 8095527835888432873, guid: 5760979ec8e7f2d49946377839a8ca39, type: 3}
   CScore: {fileID: -4359942061794215646, guid: 5760979ec8e7f2d49946377839a8ca39, type: 3}
   noteAmount: 1
+  notesPassed: -1
+  score:
+    scoreValue: 0
+    percentage: 100
+    newPersonalBest: 0
+    perfectNotes: 0
+    earlyNotes: 0
+    lateNotes: 0
+    misfiredNotes: 0
+    missedNotes: 0
+    gradeSprite: {fileID: 0}
 --- !u!1 &3259467645125078740
 GameObject:
   m_ObjectHideFlags: 0
@@ -6398,7 +6409,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: {fileID: 6452738995346211290}
-  chart: {fileID: 0}
+  chart: {fileID: 11400000, guid: aac04f1e4fbb88940a20d705a30da427, type: 2}
   musicNameTextComponent: {fileID: 4478875830721265953}
   personalBest: {fileID: 6314874415314787828}
   scoreTextComponent: {fileID: 6353501418378501004}

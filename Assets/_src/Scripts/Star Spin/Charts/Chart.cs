@@ -23,7 +23,7 @@ namespace KaitoMajima
         public class ChartScore
         {
             public Sprite gradeSprite;
-            public bool newPersonalBest;
+
             public int score;
             public float percentage;
 
@@ -33,5 +33,12 @@ namespace KaitoMajima
             public int misfiredNotes;
             public int missedNotes;
         }
+        [ContextMenu("ResetChartScore")]
+
+        public void ResetChartScore()
+        {
+            currentScore = new ChartScore();
+        }
     }
+
 }
