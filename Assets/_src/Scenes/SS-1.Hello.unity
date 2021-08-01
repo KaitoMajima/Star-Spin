@@ -25259,6 +25259,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2109378055507147525, guid: f48512cad3259a544b30699ae6df35e7, type: 3}
+      propertyPath: chart
+      value: 
+      objectReference: {fileID: 11400000, guid: aac04f1e4fbb88940a20d705a30da427, type: 2}
     - target: {fileID: 2537407267749340302, guid: f48512cad3259a544b30699ae6df35e7, type: 3}
       propertyPath: m_Name
       value: In-Game UI

@@ -27334,6 +27334,10 @@ PrefabInstance:
       propertyPath: dynamicPlayerInputReference
       value: 
       objectReference: {fileID: 11400000, guid: b0653924443e2c44e91f60621b529c3c, type: 2}
+    - target: {fileID: 2109378055507147525, guid: f48512cad3259a544b30699ae6df35e7, type: 3}
+      propertyPath: chart
+      value: 
+      objectReference: {fileID: 11400000, guid: 1fe26e6c766fba14a8f9b62e2340b3c6, type: 2}
     - target: {fileID: 2537407267078379862, guid: f48512cad3259a544b30699ae6df35e7, type: 3}
       propertyPath: m_SceneBindings.Array.data[4].value
       value: 

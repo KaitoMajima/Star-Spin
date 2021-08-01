@@ -35,12 +35,22 @@ namespace KaitoMajima
 
         public static Action<float> onNoteFail;
 
+        public static Action<int> onNoteRegister;
+
+        public enum NoteType
+        {
+            Perfect = 0,
+            Early = 1,
+            Late = 2,
+            Misfire = 3,
+            Miss = 4
+        }
         public int noteAmount = 1;
 
         private float noteHitRate = 1;
         private bool lost;
 
-        private ScoreSet score = new ScoreSet();
+        public ScoreSet score = new ScoreSet();
 
         private float currentUpdateTime = 0;
         private void Awake()
@@ -48,13 +58,64 @@ namespace KaitoMajima
             UpdateScore(0);
 
             onScoreUpdated += UpdateScore;
+            onNoteRegister += RegisterScore;
             onNoteAmountInitiated += SetNoteAmount;
             onNoteFail += FailNote;
             TowersRhythmController.onLastNote += SubmitScore;
         }
 
-        private void SubmitScore()
+        private void RegisterScore(int note)
         {
+            var noteType = (NoteType)note;
+            switch(noteType)
+            {
+                case NoteType.Perfect:
+                    score.perfectNotes++;
+                    break;
+                case NoteType.Early:
+                    score.earlyNotes++;
+                    break;
+                case NoteType.Late:
+                    score.lateNotes++;
+                    break;
+                case NoteType.Misfire:
+                    score.misfiredNotes++;
+                    break;
+                case NoteType.Miss:
+                    score.missedNotes++;
+                    break;
+               
+            }
+        }
+
+        private void SubmitScore()
+        {   
+            if(score.percentage == 100)
+            {
+                SetGrade(ref score.gradeSprite, ZScore);
+            }
+                
+            else if(score.percentage > 99)
+            {
+                SetGrade(ref score.gradeSprite, SS_Score);
+            }
+            else if(score.percentage > 95)
+            {
+                SetGrade(ref score.gradeSprite, S_Score);
+            }
+            else if(score.percentage > 85)
+            {
+                SetGrade(ref score.gradeSprite, AScore);
+            }
+            else if(score.percentage > 70)
+            {
+                SetGrade(ref score.gradeSprite, BScore);
+            }
+            else
+            {
+                SetGrade(ref score.gradeSprite, CScore);
+            }
+
             if(musicChart.currentScore.gradeSprite != null)
             {
                 int previousScore = musicChart.currentScore.score;
@@ -62,22 +123,24 @@ namespace KaitoMajima
                     return;
 
             }
+            score.newPersonalBest = true;
+
             musicChart.currentScore.score = score.scoreValue;
             musicChart.currentScore.percentage = score.percentage;
 
-            if(score.percentage == 100)
-                musicChart.currentScore.gradeSprite = ZScore;
-            else if(score.percentage > 99)
-                musicChart.currentScore.gradeSprite = SS_Score;
-            else if(score.percentage > 95)
-                musicChart.currentScore.gradeSprite = S_Score;
-            else if(score.percentage > 85)
-                musicChart.currentScore.gradeSprite = AScore;
-            else if(score.percentage > 70)
-                musicChart.currentScore.gradeSprite = BScore;
-            else
-                musicChart.currentScore.gradeSprite = CScore;
+            musicChart.currentScore.perfectNotes = score.perfectNotes;
+            musicChart.currentScore.earlyNotes = score.earlyNotes;
+            musicChart.currentScore.lateNotes = score.misfiredNotes;
+            musicChart.currentScore.misfiredNotes = score.misfiredNotes;
+            musicChart.currentScore.missedNotes = score.missedNotes;
 
+            musicChart.currentScore.gradeSprite = score.gradeSprite;
+
+        }
+
+        private void SetGrade(ref Sprite receivingSprite, Sprite spriteSender)
+        {
+            receivingSprite = spriteSender;
         }
         private void UpdateScore(int noteValue)
         {
@@ -149,8 +212,13 @@ namespace KaitoMajima
     {
         public int scoreValue = 0;
         public float percentage = 100;
-
-        
+        public bool newPersonalBest;
+        public int perfectNotes;
+        public int earlyNotes;
+        public int lateNotes;
+        public int misfiredNotes;
+        public int missedNotes;
+        public Sprite gradeSprite;
     }
     
 }

@@ -49,6 +49,7 @@ GameObject:
   - component: {fileID: 1226793180397712197}
   - component: {fileID: 4981185486876446759}
   - component: {fileID: 5815466094307538686}
+  - component: {fileID: 4531269906211679160}
   m_Layer: 0
   m_Name: MisfireFeedback
   m_TagString: Untagged
@@ -216,6 +217,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4531269906211679160}
+        m_TargetAssemblyTypeName: KaitoMajima.ScoreSender, Assembly-CSharp
+        m_MethodName: RegisterNote
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   StopEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -267,6 +280,19 @@ MonoBehaviour:
     AmplitudeX: 7
     AmplitudeY: 20
     AmplitudeZ: 0
+--- !u!114 &4531269906211679160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2069875834357817282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a272f92730e06f84798830af3c8fa139, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectSpawner: {fileID: 0}
 --- !u!1 &3229282192482127897
 GameObject:
   m_ObjectHideFlags: 0
@@ -313,6 +339,7 @@ GameObject:
   - component: {fileID: 1679793651113985945}
   - component: {fileID: 7420781825418563566}
   - component: {fileID: 4924043639765313962}
+  - component: {fileID: 3455645358033289365}
   m_Layer: 0
   m_Name: MissFeedback
   m_TagString: Untagged
@@ -480,6 +507,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 3455645358033289365}
+        m_TargetAssemblyTypeName: KaitoMajima.ScoreSender, Assembly-CSharp
+        m_MethodName: RegisterNote
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   StopEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -531,6 +570,19 @@ MonoBehaviour:
     AmplitudeX: 7
     AmplitudeY: 20
     AmplitudeZ: 0
+--- !u!114 &3455645358033289365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3591447725761066043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a272f92730e06f84798830af3c8fa139, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectSpawner: {fileID: 0}
 --- !u!1 &3922979722687998077
 GameObject:
   m_ObjectHideFlags: 0
@@ -815,6 +867,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 971109351964912086}
+        m_TargetAssemblyTypeName: KaitoMajima.ScoreSender, Assembly-CSharp
+        m_MethodName: RegisterNote
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   StopEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -987,6 +1051,18 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0.5
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 272306947685229538}
+        m_TargetAssemblyTypeName: KaitoMajima.ScoreSender, Assembly-CSharp
+        m_MethodName: RegisterNote
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -1723,6 +1799,18 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0.5
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2903224486442013305}
+        m_TargetAssemblyTypeName: KaitoMajima.ScoreSender, Assembly-CSharp
+        m_MethodName: RegisterNote
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2

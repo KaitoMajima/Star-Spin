@@ -26,6 +26,12 @@ namespace KaitoMajima
             public bool newPersonalBest;
             public int score;
             public float percentage;
+
+            public int perfectNotes;
+            public int earlyNotes;
+            public int lateNotes;
+            public int misfiredNotes;
+            public int missedNotes;
         }
     }
 }

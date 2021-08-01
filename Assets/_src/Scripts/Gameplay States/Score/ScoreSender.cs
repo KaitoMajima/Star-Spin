@@ -14,5 +14,10 @@ namespace KaitoMajima
             var feedbackScript = feedbackScore.GetComponent<ScoreFeedback>();
             feedbackScript.SetScore(noteScore);
         }
+
+        public void RegisterNote(int noteType)
+        {
+            Score.onNoteRegister?.Invoke(noteType);
+        }
     }
 }
