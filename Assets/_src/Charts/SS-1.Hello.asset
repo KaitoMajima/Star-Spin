@@ -24,7 +24,6 @@ MonoBehaviour:
   sceneName: SS-1.Hello
   currentScore:
     gradeSprite: {fileID: 0}
-    newPersonalBest: 0
     score: 0
     percentage: 0
     perfectNotes: 0

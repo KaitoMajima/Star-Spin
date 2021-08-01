@@ -34868,6 +34868,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3196671686358164286, guid: f48512cad3259a544b30699ae6df35e7, type: 3}
+      propertyPath: eventID
+      value: DTB-Looking for edge of Ground(WinPoint)
+      objectReference: {fileID: 0}
     - target: {fileID: 3908995454641939678, guid: f48512cad3259a544b30699ae6df35e7, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -34909,8 +34913,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6452738995346211290, guid: f48512cad3259a544b30699ae6df35e7, type: 3}
+      propertyPath: musicChart
+      value: 
+      objectReference: {fileID: 11400000, guid: 012a3f5383c0b2d4a88b4967ec826332, type: 2}
+    - target: {fileID: 6452738995346211290, guid: f48512cad3259a544b30699ae6df35e7, type: 3}
       propertyPath: notesPassed
-      value: 0
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452738995346211290, guid: f48512cad3259a544b30699ae6df35e7, type: 3}
+      propertyPath: healthState.Health
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452738995346211290, guid: f48512cad3259a544b30699ae6df35e7, type: 3}
+      propertyPath: healthState.MaxHealth
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6817971788386933157, guid: f48512cad3259a544b30699ae6df35e7, type: 3}
       propertyPath: m_AnchorMax.y
