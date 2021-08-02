@@ -5722,7 +5722,15 @@ PrefabInstance:
       objectReference: {fileID: 4281630494438879205}
     - target: {fileID: 7720541779705417790, guid: bc40c4aa8978a0d44b20d50c933c732c, type: 3}
       propertyPath: m_text
-      value: Calibration Rate (In seconds)
+      value: "Taxa de Calibra\xE7\xE3o (In seconds)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7720541779705417790, guid: bc40c4aa8978a0d44b20d50c933c732c, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: e642d6e262945bb469e8521d2fe38a84, type: 2}
+    - target: {fileID: 7720541779705417790, guid: bc40c4aa8978a0d44b20d50c933c732c, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7720541779857505053, guid: bc40c4aa8978a0d44b20d50c933c732c, type: 3}
       propertyPath: m_Value
@@ -11086,6 +11094,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8948391486509803252, guid: 89b20f02c7a97af479719e145f5d11d5, type: 3}
   m_PrefabInstance: {fileID: 413366088}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &432214341 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4281630492737720695, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+  m_PrefabInstance: {fileID: 4281630494438879203}
+  m_PrefabAsset: {fileID: 0}
+--- !u!225 &432214342
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 432214341}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &441216631
 GameObject:
   m_ObjectHideFlags: 0
@@ -35601,10 +35626,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4890093, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_text
+      value: COMO JOGAR
+      objectReference: {fileID: 0}
+    - target: {fileID: 351383745, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_text
+      value: 'Ciclo:'
+      objectReference: {fileID: 0}
+    - target: {fileID: 538009358, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_text
+      value: "Nome da m\xFAsica"
+      objectReference: {fileID: 0}
     - target: {fileID: 678624159, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
       propertyPath: musicSource
       value: 
       objectReference: {fileID: 51672868}
+    - target: {fileID: 856191385, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_text
+      value: '[Z] Voltar'
+      objectReference: {fileID: 0}
     - target: {fileID: 1046655124, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
       propertyPath: serializationData.Prefab
       value: 
@@ -35613,10 +35654,86 @@ PrefabInstance:
       propertyPath: musicSource
       value: 
       objectReference: {fileID: 51672868}
+    - target: {fileID: 1332252453, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_text
+      value: por <color=#FF8F94>Camellia</color>
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332252453, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: e642d6e262945bb469e8521d2fe38a84, type: 2}
+    - target: {fileID: 1332252453, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1400179035, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_text
+      value: '[Z] Voltar'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1524054659, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_text
+      value: JOGAR
+      objectReference: {fileID: 0}
+    - target: {fileID: 1541853006, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_text
+      value: por <color=#FF8F94>Camellia</color>
+      objectReference: {fileID: 0}
+    - target: {fileID: 1541853006, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: e642d6e262945bb469e8521d2fe38a84, type: 2}
+    - target: {fileID: 1541853006, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2011420662, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
       propertyPath: musicSource
       value: 
       objectReference: {fileID: 51672868}
+    - target: {fileID: 183071555781425458, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_text
+      value: Contador de FPS
+      objectReference: {fileID: 0}
+    - target: {fileID: 339677326304482737, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_text
+      value: '[Z] Voltar'
+      objectReference: {fileID: 0}
+    - target: {fileID: 339677326939195366, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_text
+      value: Como Jogar
+      objectReference: {fileID: 0}
+    - target: {fileID: 856350013163552785, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_text
+      value: Mostrar barra de vida
+      objectReference: {fileID: 0}
+    - target: {fileID: 856350013163552785, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: e642d6e262945bb469e8521d2fe38a84, type: 2}
+    - target: {fileID: 856350013163552785, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433359917856298062, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_text
+      value: "Cada forma de <color=#edd064>an\xE9is de nota</color> precisam ser
+        acertadas especificamente:\n- Um c\xEDrculo precisa ser acertado com o Bot\xE3o
+        Esquerdo do Mouse (ou Z);\r\n- Um quadrado precisa ser acertado com o Bot\xE3o
+        Direito do Mouse (ou X);\r\n\r- A estrela precisa ser acertada com o Bot\xE3o
+        Esquerdo e Direito do Mouse (ou Z e X)!\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1885868464739706368, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_text
+      value: Jogo
+      objectReference: {fileID: 0}
+    - target: {fileID: 1885868464739706368, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: e642d6e262945bb469e8521d2fe38a84, type: 2}
+    - target: {fileID: 1885868464739706368, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1953748211942777096, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
       propertyPath: serializationData.Prefab
       value: 
@@ -35625,6 +35742,79 @@ PrefabInstance:
       propertyPath: serializationData.Prefab
       value: 
       objectReference: {fileID: 2282160763264073186, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+    - target: {fileID: 3073790562779123296, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_text
+      value: "Essa configura\xE7\xE3o determina o\nquanto um anel de nota precisa\npermanecer
+        na tela at\xE9 chegar\nno bot\xE3o da nota.\n\nA nota aparece mais r\xE1pido
+        no 0, e aparece mais lenta no n\xEDvel 6."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3234280965515872238, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_text
+      value: "Tenha cuidado para n\xE3o errar muitas notas e deixar sua barra de
+        vida descer para 0! Voc\xEA consegue recuperar vida ao acertar mais notas."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3427934180350292387, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_text
+      value: Parcial
+      objectReference: {fileID: 0}
+    - target: {fileID: 3427934181176517234, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_text
+      value: "Taxa de Part\xEDculas"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3427934181176517234, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: e642d6e262945bb469e8521d2fe38a84, type: 2}
+    - target: {fileID: 3427934181176517234, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3920084743852875977, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_text
+      value: 'Mapa: '
+      objectReference: {fileID: 0}
+    - target: {fileID: 3959250668801780754, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_text
+      value: Como jogar
+      objectReference: {fileID: 0}
+    - target: {fileID: 4281630492705776519, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_text
+      value: 'Assets usados:
+
+        Koreographer, FEEL'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4281630492954660736, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_text
+      value: "Op\xE7\xF5es do Jogo"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4281630493229008809, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_text
+      value: Jogar
+      objectReference: {fileID: 0}
+    - target: {fileID: 4281630493229008809, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_fontSize
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 4281630493229008809, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: e642d6e262945bb469e8521d2fe38a84, type: 2}
+    - target: {fileID: 4281630493229008809, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 965179502180809879, guid: e642d6e262945bb469e8521d2fe38a84, type: 2}
+    - target: {fileID: 4281630493338066591, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_text
+      value: Selecione uma aba no lado esquerdo!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4281630493338066591, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: e642d6e262945bb469e8521d2fe38a84, type: 2}
+    - target: {fileID: 4281630493338066591, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4281630493385607237, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
       propertyPath: m_Name
       value: MAIN MENU UI
@@ -35713,14 +35903,247 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4281630493441624178, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_Alpha
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4281630493591819318, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
       propertyPath: serializationData.Prefab
       value: 
       objectReference: {fileID: 4281630493591819318, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+    - target: {fileID: 4281630493733290088, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_text
+      value: "Op\xE7\xF5es de Volume"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4281630493809237531, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_text
+      value: '[Z] Voltar'
+      objectReference: {fileID: 0}
     - target: {fileID: 4281630493816888525, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
       propertyPath: serializationData.Prefab
       value: 
       objectReference: {fileID: 4281630493816888525, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+    - target: {fileID: 4281630493841776570, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_text
+      value: "Cr\xE9ditos"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4281630493896520582, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_text
+      value: "Mostrar pontua\xE7\xE3o"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4281630493896520582, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: e642d6e262945bb469e8521d2fe38a84, type: 2}
+    - target: {fileID: 4281630493896520582, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4281630493934080144, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_text
+      value: "Configura\xE7\xF5es"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4281630494127004946, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_text
+      value: Volume Mestre
+      objectReference: {fileID: 0}
+    - target: {fileID: 4281630494127004946, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: e642d6e262945bb469e8521d2fe38a84, type: 2}
+    - target: {fileID: 4281630494127004946, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4281630494209750001, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_text
+      value: "[Setas/WASD] Mudar configura\xE7\xF5es"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4281630494209750001, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: e642d6e262945bb469e8521d2fe38a84, type: 2}
+    - target: {fileID: 4281630494209750001, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4281630494387143489, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_text
+      value: "Op\xE7\xF5es de Debug"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4281630494552532514, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_text
+      value: "Toda a m\xFAsica produzida por <color=#FF8F94><b>Camellia</color></b>\nM\xFAsica
+        do Menu: Crystallized por <color=#FF8F94><b>Camellia</color></b>"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4281630494645790774, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: e642d6e262945bb469e8521d2fe38a84, type: 2}
+    - target: {fileID: 4281630494645790774, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4281630494714432995, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_text
+      value: "Configura\xE7\xF5es"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4281630494714432995, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_fontSize
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 4281630494762549338, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_text
+      value: 'Jogo feito por
+
+        -- KaitoMajima --'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4281630494771232897, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_text
+      value: "Op\xE7\xF5es de Video"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4281630494782265732, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_text
+      value: '[Enter] Confirmar'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4826501587738014561, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_text
+      value: "Mostrar bot\xE3o de pause"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4826501587738014561, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: e642d6e262945bb469e8521d2fe38a84, type: 2}
+    - target: {fileID: 4826501587738014561, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4918445285754235102, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_text
+      value: Como Jogar
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077210811449180436, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_text
+      value: Como Jogar
+      objectReference: {fileID: 0}
+    - target: {fileID: 5100526660711757767, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_text
+      value: "Essa fun\xE7\xE3o determina o quanto\ntodos os elementos do fundo ficar\xE3o
+        vis\xEDveis."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5578848147602249096, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_text
+      value: "Para acertar os an\xE9is de nota, voc\xEA precisa clicar neles quando
+        entrarem no bot\xE3o de nota!\n\"P\" significa que voc\xEA acertou a nota
+        perfeitamente, enquanto \"G\" significa que voc\xEA adiantou ou atrasou o
+        clique.\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5581990238819351660, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_text
+      value: "N\xEDvel de <i>Screen Shake"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5581990238819351660, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: e642d6e262945bb469e8521d2fe38a84, type: 2}
+    - target: {fileID: 5581990238819351660, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5581990240216068029, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_text
+      value: Parcial
+      objectReference: {fileID: 0}
+    - target: {fileID: 5627211290325876366, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_text
+      value: "Cada n\xEDvel tem seu pr\xF3prio <i>c\xEDclo</i> de<color=#8a3da9>
+        bot\xF5es de nota</color>, e voc\xEA precisa acompanhar o ritmo do <i>ciclo</i>!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5787025318180128259, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: e642d6e262945bb469e8521d2fe38a84, type: 2}
+    - target: {fileID: 5787025318180128259, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5787046253597201197, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_text
+      value: "Volume da m\xFAsica"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5787046253597201197, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: e642d6e262945bb469e8521d2fe38a84, type: 2}
+    - target: {fileID: 5787046253597201197, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5787046253755532481, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_text
+      value: Volume dos efeitos sonoros
+      objectReference: {fileID: 0}
+    - target: {fileID: 5787046253755532481, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: e642d6e262945bb469e8521d2fe38a84, type: 2}
+    - target: {fileID: 5787046253755532481, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5787046254037692842, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_text
+      value: Visibilidade do fundo
+      objectReference: {fileID: 0}
+    - target: {fileID: 5787046254037692842, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: e642d6e262945bb469e8521d2fe38a84, type: 2}
+    - target: {fileID: 5787046254037692842, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5787046254037692842, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5787046254551194202, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_text
+      value: "Taxa de aproxima\xE7\xE3o (Approach Rate)*"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5787046254551194202, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: e642d6e262945bb469e8521d2fe38a84, type: 2}
+    - target: {fileID: 5787046254551194202, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5787046254551194202, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5870084343778293897, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_text
+      value: Como jogar
+      objectReference: {fileID: 0}
+    - target: {fileID: 8574023335313160002, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_text
+      value: '[Z] Voltar'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8574023335313160002, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: e642d6e262945bb469e8521d2fe38a84, type: 2}
+    - target: {fileID: 8574023335313160002, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9037801073207767847, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: m_text
+      value: "O jogo possui suporte para tablets de desenho e canetas virtuais! Tente
+        usar se voc\xEA tiver um!"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
 --- !u!114 &4281630494438879204 stripped

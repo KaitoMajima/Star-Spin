@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: MISS
+  m_text: FALHA
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f3831819aaaf683498b2be938c0c6d88, type: 2}
   m_sharedMaterial: {fileID: -7262681869172795627, guid: f3831819aaaf683498b2be938c0c6d88, type: 2}
@@ -355,7 +355,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &2943328363885152980
 MonoBehaviour:
   m_ObjectHideFlags: 0
