@@ -10,23 +10,17 @@ namespace KaitoMajima
 
         [SerializeField] private float updateStep;
 
-        [SerializeField] private int sampleDataLength = 1024;
+        [SerializeField] private BeatSyncState beatSyncState = BeatSyncState.Default;
 
         private float currentUpdateTime = 0;
 
-        [SerializeField] private float clipLoudness;
-
-        private float[] clipSampleData;
+        private float[] passingSampleData;
         [SerializeField] private Transform targetTransform; 
-        [SerializeField] private float sizeFactor = 1;
-
-        [SerializeField] private float limitLoudness = 20;
-        [SerializeField] private float minSize;
-        [SerializeField] private float maxSize = 500;
 
         private void Awake()
         {
-            clipSampleData = new float[sampleDataLength];
+            passingSampleData = new float[beatSyncState.sampleDataLength];
+            BeatSync.InitializeSamples(ref beatSyncState);
         }
 
         private void Update()
@@ -35,17 +29,11 @@ namespace KaitoMajima
             if(currentUpdateTime >= updateStep)
             {
                 currentUpdateTime = 0;
-                musicSource.clip.GetData(clipSampleData, musicSource.timeSamples);
-                clipLoudness = 0;
-                foreach (var sample in clipSampleData)
-                {
-                    clipLoudness += Mathf.Abs(sample);
-                }
-                clipLoudness /= sampleDataLength;
+                musicSource.clip.GetData(passingSampleData, musicSource.timeSamples);
+                beatSyncState.ClipSampleData = passingSampleData;
 
-                clipLoudness *= sizeFactor;
-                clipLoudness = RangeConverter.ConvertValues(clipLoudness, 0, limitLoudness, minSize, maxSize);
-                targetTransform.localScale = new Vector3(clipLoudness, clipLoudness, targetTransform.localScale.z);
+                var loudness = BeatSync.GetLoudness(ref beatSyncState);
+                targetTransform.localScale = new Vector3(loudness, loudness, targetTransform.localScale.z);
             }
         }
     }
