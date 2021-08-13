@@ -7490,14 +7490,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicSource: {fileID: 112340725}
+  musicDynamicReference: {fileID: 11400000, guid: 5acaefbeba51c304993f58be679dd808, type: 2}
   updateStep: 0.01
-  sampleDataLength: 2048
-  clipLoudness: 0
+  beatSyncState:
+    sampleDataLength: 2048
+    valueFactor: 5
+    limitLoudness: 25
+    minValue: 0.7
+    maxValue: 1.1
   targetTransform: {fileID: 604832398}
-  sizeFactor: 3.2
-  limitLoudness: 20
-  minSize: 0.7
-  maxSize: 2
 --- !u!1001 &612255743
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7754,14 +7755,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicSource: {fileID: 112340725}
+  musicDynamicReference: {fileID: 11400000, guid: 5acaefbeba51c304993f58be679dd808, type: 2}
   updateStep: 0.01
-  sampleDataLength: 2048
-  clipLoudness: 0
+  beatSyncState:
+    sampleDataLength: 2048
+    valueFactor: 4
+    limitLoudness: 25
+    minValue: 0.3
+    maxValue: 1
   targetTransform: {fileID: 650963729}
-  sizeFactor: 3.2
-  limitLoudness: 20
-  minSize: 0.3
-  maxSize: 3
 --- !u!1 &660551465
 GameObject:
   m_ObjectHideFlags: 0

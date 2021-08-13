@@ -5436,14 +5436,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicSource: {fileID: 112340725}
+  musicDynamicReference: {fileID: 11400000, guid: 5acaefbeba51c304993f58be679dd808, type: 2}
   updateStep: 0.05
-  sampleDataLength: 2048
-  clipLoudness: 0
+  beatSyncState:
+    sampleDataLength: 1024
+    valueFactor: 10
+    limitLoudness: 20
+    minValue: 0.4
+    maxValue: 1
   targetTransform: {fileID: 253425706}
-  sizeFactor: 1.7
-  limitLoudness: 20
-  minSize: 0.4
-  maxSize: 2.5
 --- !u!212 &253425708
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5729,7 +5730,7 @@ MonoBehaviour:
   eventID: DTB-Hello To The Your First Game(Playable)
   calibrationRate: {fileID: 11400000, guid: 4fae8668156c33d4292f9a13aa108810, type: 2}
   timingOptions: {fileID: 11400000, guid: c83ceef2924d54744a51e635c2accc1f, type: 2}
-  debugMode: 1
+  debugMode: 0
   timeSkip: 260
   rawKoreographyEvents: []
 --- !u!114 &418300909
@@ -6335,14 +6336,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicSource: {fileID: 112340725}
+  musicDynamicReference: {fileID: 11400000, guid: 5acaefbeba51c304993f58be679dd808, type: 2}
   updateStep: 0.05
-  sampleDataLength: 2048
-  clipLoudness: 0
+  beatSyncState:
+    sampleDataLength: 1024
+    valueFactor: 10
+    limitLoudness: 20
+    minValue: 0.4
+    maxValue: 1
   targetTransform: {fileID: 630590408}
-  sizeFactor: 1.7
-  limitLoudness: 20
-  minSize: 0.4
-  maxSize: 2.5
 --- !u!1 &660551465
 GameObject:
   m_ObjectHideFlags: 0
@@ -6597,14 +6599,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicSource: {fileID: 112340725}
+  musicDynamicReference: {fileID: 11400000, guid: 5acaefbeba51c304993f58be679dd808, type: 2}
   updateStep: 0.05
-  sampleDataLength: 2048
-  clipLoudness: 0
+  beatSyncState:
+    sampleDataLength: 1024
+    valueFactor: 10
+    limitLoudness: 20
+    minValue: 0.4
+    maxValue: 1
   targetTransform: {fileID: 671300976}
-  sizeFactor: 1.7
-  limitLoudness: 20
-  minSize: 0.4
-  maxSize: 2.5
 --- !u!1 &764730130
 GameObject:
   m_ObjectHideFlags: 0
@@ -6650,14 +6653,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicSource: {fileID: 112340725}
+  musicDynamicReference: {fileID: 11400000, guid: 5acaefbeba51c304993f58be679dd808, type: 2}
   updateStep: 0.05
-  sampleDataLength: 2048
-  clipLoudness: 0
+  beatSyncState:
+    sampleDataLength: 1024
+    valueFactor: 10
+    limitLoudness: 20
+    minValue: 0.4
+    maxValue: 1
   targetTransform: {fileID: 764730131}
-  sizeFactor: 1.7
-  limitLoudness: 20
-  minSize: 0.4
-  maxSize: 2.5
 --- !u!212 &764730133
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12586,14 +12590,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicSource: {fileID: 112340725}
-  updateStep: 0.05
-  sampleDataLength: 2048
-  clipLoudness: 0
+  musicDynamicReference: {fileID: 11400000, guid: 5acaefbeba51c304993f58be679dd808, type: 2}
+  updateStep: 0.01
+  beatSyncState:
+    sampleDataLength: 1024
+    valueFactor: 6
+    limitLoudness: 30
+    minValue: 0.82
+    maxValue: 1.4
   targetTransform: {fileID: 1098640917}
-  sizeFactor: 1.7
-  limitLoudness: 20
-  minSize: 0.8
-  maxSize: 2
 --- !u!1 &1142952899
 GameObject:
   m_ObjectHideFlags: 0
@@ -12792,14 +12797,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicSource: {fileID: 112340725}
+  musicDynamicReference: {fileID: 11400000, guid: 5acaefbeba51c304993f58be679dd808, type: 2}
   updateStep: 0.05
-  sampleDataLength: 2048
-  clipLoudness: 0
+  beatSyncState:
+    sampleDataLength: 1024
+    valueFactor: 10
+    limitLoudness: 20
+    minValue: 0.4
+    maxValue: 1
   targetTransform: {fileID: 1164258170}
-  sizeFactor: 1.7
-  limitLoudness: 20
-  minSize: 0.4
-  maxSize: 2.5
 --- !u!212 &1164258172
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18464,14 +18470,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicSource: {fileID: 112340725}
+  musicDynamicReference: {fileID: 11400000, guid: 5acaefbeba51c304993f58be679dd808, type: 2}
   updateStep: 0.05
-  sampleDataLength: 2048
-  clipLoudness: 0
+  beatSyncState:
+    sampleDataLength: 1024
+    valueFactor: 10
+    limitLoudness: 20
+    minValue: 0.4
+    maxValue: 1
   targetTransform: {fileID: 1604449047}
-  sizeFactor: 1.7
-  limitLoudness: 20
-  minSize: 0.4
-  maxSize: 2.5
 --- !u!1 &1623967895
 GameObject:
   m_ObjectHideFlags: 0
@@ -24763,14 +24770,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicSource: {fileID: 112340725}
+  musicDynamicReference: {fileID: 11400000, guid: 5acaefbeba51c304993f58be679dd808, type: 2}
   updateStep: 0.05
-  sampleDataLength: 2048
-  clipLoudness: 0
+  beatSyncState:
+    sampleDataLength: 1024
+    valueFactor: 10
+    limitLoudness: 20
+    minValue: 0.4
+    maxValue: 1
   targetTransform: {fileID: 2110487730}
-  sizeFactor: 1.7
-  limitLoudness: 20
-  minSize: 0.4
-  maxSize: 2.5
 --- !u!1 &2114768267
 GameObject:
   m_ObjectHideFlags: 0

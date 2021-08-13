@@ -243,6 +243,7 @@ GameObject:
   - component: {fileID: 25051295}
   - component: {fileID: 25051294}
   - component: {fileID: 25051293}
+  - component: {fileID: 25051296}
   m_Layer: 0
   m_Name: Flowers
   m_TagString: Untagged
@@ -5064,6 +5065,28 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!114 &25051296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 25051291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7589a21ec65fa944bb0729e8b6588fb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentParticleSystem: {fileID: 25051295}
+  musicSource: {fileID: 0}
+  musicDynamicReference: {fileID: 11400000, guid: 5acaefbeba51c304993f58be679dd808, type: 2}
+  updateStep: 0.05
+  beatSyncState:
+    sampleDataLength: 1024
+    valueFactor: 60
+    limitLoudness: 40
+    minValue: 1
+    maxValue: 5
 --- !u!1 &51672867
 GameObject:
   m_ObjectHideFlags: 0
@@ -5074,6 +5097,7 @@ GameObject:
   m_Component:
   - component: {fileID: 51672869}
   - component: {fileID: 51672868}
+  - component: {fileID: 51672870}
   m_Layer: 0
   m_Name: Music
   m_TagString: Untagged
@@ -5191,6 +5215,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &51672870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51672867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29726ee38015e654d87a9fa8bbe42796, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transformReference: {fileID: 11400000, guid: 5acaefbeba51c304993f58be679dd808, type: 2}
+  initialTransformToSubscribe: {fileID: 51672869}
+  subscribeAtAwake: 1
 --- !u!1001 &116189996
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26611,6 +26650,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicSource: {fileID: 51672868}
+  musicDynamicReference: {fileID: 11400000, guid: 5acaefbeba51c304993f58be679dd808, type: 2}
   updateStep: 0.01
   beatSyncState:
     sampleDataLength: 1024
@@ -26839,6 +26879,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicSource: {fileID: 51672868}
+  musicDynamicReference: {fileID: 11400000, guid: 5acaefbeba51c304993f58be679dd808, type: 2}
   updateStep: 0.04
   beatSyncState:
     sampleDataLength: 1024
@@ -27485,6 +27526,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicSource: {fileID: 51672868}
+  musicDynamicReference: {fileID: 11400000, guid: 5acaefbeba51c304993f58be679dd808, type: 2}
   updateStep: 0.04
   beatSyncState:
     sampleDataLength: 1024
@@ -28524,6 +28566,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicSource: {fileID: 51672868}
+  musicDynamicReference: {fileID: 11400000, guid: 5acaefbeba51c304993f58be679dd808, type: 2}
   updateStep: 0.04
   beatSyncState:
     sampleDataLength: 1024
@@ -33919,6 +33962,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicSource: {fileID: 51672868}
+  musicDynamicReference: {fileID: 11400000, guid: 5acaefbeba51c304993f58be679dd808, type: 2}
   updateStep: 0.04
   beatSyncState:
     sampleDataLength: 1024
@@ -34789,6 +34833,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicSource: {fileID: 51672868}
+  musicDynamicReference: {fileID: 11400000, guid: 5acaefbeba51c304993f58be679dd808, type: 2}
   updateStep: 0.01
   beatSyncState:
     sampleDataLength: 1024
@@ -35003,6 +35048,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicSource: {fileID: 51672868}
+  musicDynamicReference: {fileID: 11400000, guid: 5acaefbeba51c304993f58be679dd808, type: 2}
   updateStep: 0.04
   beatSyncState:
     sampleDataLength: 1024
@@ -35643,6 +35689,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 51672868}
     - target: {fileID: 678624159, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: musicDynamicReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 5acaefbeba51c304993f58be679dd808, type: 2}
+    - target: {fileID: 678624159, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
       propertyPath: beatSyncState.maxValue
       value: 2.2
       objectReference: {fileID: 0}
@@ -35666,6 +35716,10 @@ PrefabInstance:
       propertyPath: musicSource
       value: 
       objectReference: {fileID: 51672868}
+    - target: {fileID: 1208129827, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
+      propertyPath: musicDynamicReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 5acaefbeba51c304993f58be679dd808, type: 2}
     - target: {fileID: 1208129827, guid: 0c62889b41f16c94b885e26e16f1ac20, type: 3}
       propertyPath: beatSyncState.maxValue
       value: 4

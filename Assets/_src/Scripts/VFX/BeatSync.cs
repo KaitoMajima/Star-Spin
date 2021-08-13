@@ -33,26 +33,27 @@ namespace KaitoMajima
 
     public static class BeatSync
     {
-        public static void InitializeSamples(ref BeatSyncState beatState)
+        public static void InitializeSamples(ref BeatSyncState beatSyncState)
         {
-            beatState.ClipSampleData = new float[beatState.sampleDataLength];
+            beatSyncState.ClipSampleData = new float[beatSyncState.sampleDataLength];
         }
 
 
-        public static float GetLoudness(ref BeatSyncState beatState)
+        public static float GetLoudness(ref BeatSyncState beatSyncState, float[] passingSampleData)
         {
+            beatSyncState.ClipSampleData = passingSampleData;
 
-            beatState.ClipLoudness = 0;
-            foreach (var sample in beatState.ClipSampleData)
+            beatSyncState.ClipLoudness = 0;
+            foreach (var sample in beatSyncState.ClipSampleData)
             {
-                beatState.ClipLoudness += Mathf.Abs(sample);
+                beatSyncState.ClipLoudness += Mathf.Abs(sample);
             }
-            beatState.ClipLoudness /= beatState.sampleDataLength;
+            beatSyncState.ClipLoudness /= beatSyncState.sampleDataLength;
 
-            beatState.ClipLoudness *= beatState.valueFactor;
-            beatState.ClipLoudness = RangeConverter.ConvertValues(beatState.ClipLoudness, 0, beatState.limitLoudness, beatState.minValue, beatState.maxValue);
+            beatSyncState.ClipLoudness *= beatSyncState.valueFactor;
+            beatSyncState.ClipLoudness = RangeConverter.ConvertValues(beatSyncState.ClipLoudness, 0, beatSyncState.limitLoudness, beatSyncState.minValue, beatSyncState.maxValue);
 
-            return beatState.ClipLoudness;
+            return beatSyncState.ClipLoudness;
         }
     }
 }

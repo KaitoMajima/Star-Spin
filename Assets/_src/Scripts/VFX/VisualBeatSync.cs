@@ -8,7 +8,9 @@ namespace KaitoMajima
     {
         [SerializeField] private AudioSource musicSource;
 
-        [SerializeField] private float updateStep;
+        [SerializeField] private TransformReference musicDynamicReference;
+
+        [SerializeField] private float updateStep = 0.1f;
 
         [SerializeField] private BeatSyncState beatSyncState = BeatSyncState.Default;
 
@@ -17,8 +19,11 @@ namespace KaitoMajima
         private float[] passingSampleData;
         [SerializeField] private Transform targetTransform; 
 
-        private void Awake()
+        private void Start()
         {
+            if(musicDynamicReference != null)
+                musicSource = musicDynamicReference.Value.GetComponent<AudioSource>();
+            
             passingSampleData = new float[beatSyncState.sampleDataLength];
             BeatSync.InitializeSamples(ref beatSyncState);
         }
@@ -30,9 +35,8 @@ namespace KaitoMajima
             {
                 currentUpdateTime = 0;
                 musicSource.clip.GetData(passingSampleData, musicSource.timeSamples);
-                beatSyncState.ClipSampleData = passingSampleData;
-
-                var loudness = BeatSync.GetLoudness(ref beatSyncState);
+                
+                var loudness = BeatSync.GetLoudness(ref beatSyncState, passingSampleData);
                 targetTransform.localScale = new Vector3(loudness, loudness, targetTransform.localScale.z);
             }
         }
